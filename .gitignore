@@ -1,0 +1,5 @@
+
+poky/*
+./build/cache
+./build/hashserve.sock
+./build/bitbake-cookerdaemon.log
