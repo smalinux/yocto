@@ -3,6 +3,7 @@ SMA Clone Poky
 SMA update yocto source to latest
 SMA Initialize the Build Environment & Setup env vars & etc ...
 SMA build & run cycle
+SMA add app to all images
 
 
 
@@ -39,11 +40,22 @@ SMA Initialize the Build Environment & Setup env vars & etc ...
 yocto$ source oe-init-build-env
 
 
+
 SMA update yocto source to latest
 ===============================================================================
 poky$ git pull
+poky$ git checkout kirkstone-4.0.21
+
 
 
 SMA build & run cycle
 ===============================================================================
 $ bitbake core-image-minimal
+$ runqemu qemuarm nographic slirp
+
+
+SMA add app to all images
+===============================================================================
+local.conf:
+CORE_IMAGE_EXTRA_INSTALL += "bc"
+
