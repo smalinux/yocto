@@ -2,10 +2,10 @@ SMA Build Host Packages
 SMA Clone Poky
 SMA update yocto source to latest
 SMA Initialize the Build Environment & Setup env vars & etc ...
+SMA Embedded linux Ubuntu 24.04 LTS with yocto error
 SMA build & run cycle
 SMA add app to all images
 SMA create/add new layer
-SMA Embedded linux Ubuntu 24.04 LTS with yocto error
 
 
 
@@ -36,10 +36,15 @@ git clone https://git.yoctoproject.org/git/poky
 
 
 
-
 SMA Initialize the Build Environment & Setup env vars & etc ...
 ===============================================================================
 yocto$ source oe-init-build-env
+
+
+
+SMA Embedded linux Ubuntu 24.04 LTS with yocto error
+===============================================================================
+# echo 0 > /proc/sys/kernel/apparmor_restrict_unprivileged_userns
 
 
 
@@ -67,6 +72,3 @@ SMA create/add new layer
 yocto$ bitbake-layers create-layer meta-live
 yocto$ bitbake-layers add-layer meta-live
 yocto$ bitbake example
-
-
-
