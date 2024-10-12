@@ -6,6 +6,7 @@ SMA Embedded linux Ubuntu 24.04 LTS with yocto error
 SMA build & run cycle
 SMA add app to all images
 SMA create/add new layer
+SMA create image
 
 
 
@@ -72,3 +73,16 @@ SMA create/add new layer
 yocto$ bitbake-layers create-layer meta-live
 yocto$ bitbake-layers add-layer meta-live
 yocto$ bitbake example
+
+
+
+SMA create image
+===============================================================================
+Ubuntu@yocto $ mkdir ./meta-live/recipes-example/images
+Ubuntu@yocto $ cp poky/meta/recipes-core/images/core-image-minimal.bb meta-live/recipes-example/images/example-image.bb
+# modified it:
+Ubuntu@yocto $ vim meta-live/recipes-example/images/example-image.bb
+Ubuntu@yocto $ bitbake example-image
+
+
+
