@@ -7,6 +7,7 @@ SMA build & run cycle
 SMA add app to all images
 SMA create/add new layer
 SMA create image
+SMA Add htop
 
 
 
@@ -85,4 +86,20 @@ Ubuntu@yocto $ vim meta-live/recipes-example/images/example-image.bb
 Ubuntu@yocto $ bitbake example-image
 
 
+SMA add htop :)
+===============================================================================
+# Add new recipe
+$ devtool -d add https://github.com/htop-dev/htop.git --srcbranch main
 
+# Try to build the recipe
+$ devtool build htop
+
+$ devtool edit-recipe htop
+
+$ bitbake htop
+
+# Last step: Add it to the iamge
+Ubuntu@yocto $ vim meta-live/recipes-example/images/example-image.bb
+
+# rebuild your image
+Ubuntu@yocto $ bitbake example-image
