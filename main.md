@@ -4,6 +4,8 @@ SMA update yocto source to latest
 SMA Initialize the Build Environment & Setup env vars & etc ...
 SMA build & run cycle
 SMA add app to all images
+SMA create/add new layer
+SMA Embedded linux Ubuntu 24.04 LTS with yocto error
 
 
 
@@ -58,4 +60,13 @@ SMA add app to all images
 ===============================================================================
 local.conf:
 CORE_IMAGE_EXTRA_INSTALL += "bc"
+
+
+SMA create/add new layer
+===============================================================================
+yocto$ bitbake-layers create-layer meta-live
+yocto$ bitbake-layers add-layer meta-live
+yocto$ bitbake example
+
+
 
