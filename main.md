@@ -10,6 +10,7 @@ SMA create image
 SMA Add htop
 SMA package dependencies and splitting
 SMA SDKs
+SMA Systemd
 
 
 
@@ -161,3 +162,12 @@ https://docs.yoctoproject.org/sdk-manual/extensible.html
 
 $ bitbake example-image -c populate_sdk_ext
 # ls /home/smalinux/yocto-build/tmp/deploy/sdk
+
+
+
+SMA Systemd
+===============================================================================
+Done
+
+
+
