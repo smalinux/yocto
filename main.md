@@ -8,6 +8,7 @@ SMA add app to all images
 SMA create/add new layer
 SMA create image
 SMA Add htop
+SMA package dependencies and splitting
 
 
 
@@ -103,3 +104,16 @@ Ubuntu@yocto $ vim meta-live/recipes-example/images/example-image.bb
 
 # rebuild your image
 Ubuntu@yocto $ bitbake example-image
+
+
+
+SMA package dependencies and splitting
+===============================================================================
+DEPENDS = "xyz"    # build time dependency
+RDEPENDS_${PN} = "xyz"    # run time dependency
+
+# Splitting: I'm lazy to document it here ...
+PACKAGES =+ ""
+FILES:${PN}
+
+
