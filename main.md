@@ -155,3 +155,9 @@ on target:
 
 
 
+3. Extensible SDK
+===
+https://docs.yoctoproject.org/sdk-manual/extensible.html
+
+$ bitbake example-image -c populate_sdk_ext
+# ls /home/smalinux/yocto-build/tmp/deploy/sdk
