@@ -9,6 +9,7 @@ SMA create/add new layer
 SMA create image
 SMA Add htop
 SMA package dependencies and splitting
+SMA SDKs
 
 
 
@@ -115,5 +116,42 @@ RDEPENDS_${PN} = "xyz"    # run time dependency
 # Splitting: I'm lazy to document it here ...
 PACKAGES =+ ""
 FILES:${PN}
+
+
+
+SMA SDKs
+===============================================================================
+SDK = development tools (gcc, make, pkgconfig etc.)
+
+3 types from SDKs:
+1. Anal plug "tools-sdk" into local.conf (most stupid way to put SDK on target...)
+2. populate sdk for ur image (classic way)
+3. Extensible SDK
+
+2. populate sdk for ur image (classic way)
+===
+$ bitbake example-image -c populate_sdk
+# ls /home/smalinux/yocto-build/tmp/deploy/sdk
+
+# you will get script.sh & run it
+/home/smalinux/yocto-build/tmp/deploy/sdk/poky-glibc-x86_64-example-image-cortexa15t2hf-neon-qemuarm-toolchain-4.0.21.sh
+
+# Each time you wish to use the SDK in a new shell session, you need to source the environment setup script e.g.
+$ source /home/smalinux/yocto-build/sdk_classic/environment-setup-cortexa15t2hf-neon-poky-linux-gnueabi
+
+<----------------------------------
+Dev cycle
+---------
+on host:
+   cd /home/smalinux/repos/yocto/simple_hello
+   write code: vim main.c
+   $ cmake .
+   $ make
+   $ scp hello root@192.168.7.2:/home/root
+
+on target:
+   $ ./hello
+<----------------------------------
+
 
 
