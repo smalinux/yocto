@@ -1,3 +1,5 @@
+# Chapter 1. The Build System (Poky it self)
+# Chapter 2.
 SMA Build Host Packages
 SMA Clone Poky
 SMA update yocto source to latest
@@ -11,6 +13,7 @@ SMA Add htop
 SMA package dependencies and splitting
 SMA SDKs
 SMA Systemd
+SMA Configuring network booting for a development setup
 
 
 
@@ -170,4 +173,5 @@ SMA Systemd
 Done
 
 
-
+SMA Configuring network booting for a development setup
+===============================================================================
