@@ -4,4 +4,4 @@ SUMMARY = "A small image just capable of allowing a device to boot."
 
 LICENSE = "MIT"
 
-IMAGE_INSTALL += "htop"
+#IMAGE_INSTALL += "htop"
