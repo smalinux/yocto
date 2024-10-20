@@ -45,8 +45,9 @@ python3 ./script/available_space.py . >> log
 #$ source poky/oe-init-build-env ./build/
 
 
-
-
+# List all available images
+# ---------------
+# poky$ ls meta*/recipes*/images/*.bb
 
 
 
