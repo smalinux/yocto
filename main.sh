@@ -40,14 +40,7 @@ python3 ./script/available_space.py . >> log
 # architecture or machine type.
 
 
-# Source bitbake
-# ---------------
-#$ source poky/oe-init-build-env ./build/
 
-
-# List all available images
-# ---------------
-# poky$ ls meta*/recipes*/images/*.bb
 
 
 
@@ -71,6 +64,22 @@ python3 ./script/available_space.py . >> log
 # site.conf: will affect all projects
 #
 # Bitbake read site.conf -> then auto.conf -> then local.conf
+
+# Source bitbake:
+#$ source poky/oe-init-build-env ./build/
+
+
+# Building your first image
+#$ bitbake core-image-minimal
+
+
+# List all available images:
+# poky$ ls meta*/recipes*/images/*.bb
+
+
+# What files parsed when I invoke command: $ bitbake core-image-minimal
+# P: 18 & 19
+
 
 
 
