@@ -92,6 +92,11 @@ python3 ./script/available_space.py . >> log
 #$ ls meta-freescale*/recipes*/images/*.bb
 
 
+# Generate doc
+#/home/smalinux/repos/yocto/yocto-docs/documentation$ make singlehtml
+
+
+
 ###############################################################################
 
 # ------ 00.00 the end result from running ./main.sh:
