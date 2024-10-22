@@ -30,7 +30,7 @@ python3 ./script/available_space.py . >> log
 
 
 #Installing Poky
-#
+# ---------------
 # Are you ready to upgrade Poky?
 # Are all of your changes sperated away from Poky?
 # Do you test your changes on many diff Poky versions?
@@ -51,7 +51,26 @@ python3 ./script/available_space.py . >> log
 
 
 
+# Creating a build directory
+# ---------------
 
+#> P: 14
+# good practice is to have one build directory per architecture or machine type
+# FIXME change build -> architecture dir
+# source oe-init-build-env ../build/
+# source oe-init-build-env ./ti
+# source oe-init-build-env ./qemuarm
+
+# Also write template for the new build dir
+# Also fix: https://github.com/smalinux/yocto/issues/2
+
+
+# Each project has its own build/ dir
+# Each project has its own local.conf
+# vs
+# site.conf: will affect all projects
+#
+# Bitbake read site.conf -> then auto.conf -> then local.conf
 
 
 
