@@ -4,3 +4,15 @@
 [submodule "poky"]
 	path = poky
 	url = https://git.yoctoproject.org/poky
+[submodule "meta-openembedded"]
+	path = meta-openembedded
+	url = git://git.openembedded.org/meta-openembedded
+[submodule "meta-freescale"]
+	path = meta-freescale
+	url = https://github.com/Freescale/meta-freescale
+[submodule "meta-freescale-3rdparty"]
+	path = meta-freescale-3rdparty
+	url = https://github.com/Freescale/meta-freescale-3rdparty
+[submodule "meta-freescale-distro"]
+	path = meta-freescale-distro
+	url = https://github.com/Freescale/meta-freescale-distro

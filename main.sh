@@ -82,8 +82,14 @@ python3 ./script/available_space.py . >> log
 
 
 
+# Installing support for NXP hardware
+# ---------------
 
+# list all hardware boards supported:
+#$ ls meta-freescale*/conf/machine/*.conf
 
+# list the newly introduced target images:
+#$ ls meta-freescale*/recipes*/images/*.bb
 
 
 ###############################################################################
