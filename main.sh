@@ -96,6 +96,52 @@ python3 ./script/available_space.py . >> log
 #/home/smalinux/repos/yocto/yocto-docs/documentation$ make singlehtml
 
 
+###############################################################################
+# The BSP Layer    (aka: system development, linux, uboot, etc)
+###############################################################################
+
+# Creating a custom BSP layer
+## ---------------
+$ bitbake-layers create-layer meta-bsp-custom
+$ bitbake-layers add-layer meta-bsp-custom
+
+# Adding a custom kernel and bootloader
+## ---------------
+
+# Building the U-Boot bootloader
+## ---------------
+
+# Describing Linux's build system
+## ---------------
+
+# Configuring the Linux kernel
+## ---------------
+
+# Building the Linux kernel
+## ---------------
+
+# Building external kernel modules
+## ---------------
+
+# Debugging the Linux kernel and modules
+## ---------------
+
+# Debugging the Linux kernel booting process
+## ---------------
+
+# Using the kernel tracing system
+## ---------------
+
+# Managing the device tree
+## ---------------
+
+# Debugging device tree issues
+## ---------------
+
+
+
+
+
 
 ###############################################################################
 
