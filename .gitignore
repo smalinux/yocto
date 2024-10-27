@@ -1,4 +1,3 @@
-log
 build_bbb/cache
 build_bbb/deploy-ti
 build_bbb/sstate-cache
