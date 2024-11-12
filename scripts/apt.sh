@@ -14,3 +14,12 @@ help2man gawk libtool-bin libncurses5-dev unzip
 
 # qemu
 yes | sudo apt install qemu-user
+
+# TFTP
+yes | sudo apt-get install tftpd-hpa
+
+# NFS server
+yes | sudo apt-get install nfs-kernel-server
+
+# bmaptool
+yes | sudo apt-get install bmap-tools
