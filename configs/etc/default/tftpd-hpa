@@ -1,0 +1,6 @@
+# /etc/default/tftpd-hpa
+
+TFTP_USERNAME="tftp"
+TFTP_DIRECTORY="/mnt/_OUTPUT/tmp/deploy/images/"
+TFTP_OPTIONS="--secure --create"
+TFTP_ADDRESS=":69"
