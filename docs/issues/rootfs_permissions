@@ -1,0 +1,21 @@
+###############################################################################
+Problem
+###############################################################################
+
+
+
+Poky (Yocto Project Reference Distro) 5.0.4 beaglebone /dev/ttyS0
+
+beaglebone login: root
+login: can't set groups: Operation not permitted
+Poky (Yocto Project Reference Distro) 5.0.4 beaglebone /dev/ttyS0
+
+beaglebone login: root
+
+
+
+###############################################################################
+Solution
+###############################################################################
+
+sudo chown -R root:root /mnt/_OUTPUT/rootfs/

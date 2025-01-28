@@ -1,0 +1,48 @@
+SMA: URLs
+SMA: quality
+SMA: Read Later
+
+
+SMA: URLs
+===============================================================================
+https://git.yoctoproject.org/
+https://www.yoctoproject.org/development/yocto-project-compatible-layers/
+https://layers.openembedded.org/layerindex/branch/master/layers/
+
+https://www.yoctoproject.org/
+https://wiki.yoctoproject.org/wiki/Main_Page
+https://docs.yoctoproject.org/ref-manual/resources.html
+
+
+SMA: quality
+===============================================================================
+Use Git, not the tarball download
+
+
+Yocto build steps:
+==================
+   Fetch – get the source code
+   Extract – unpack the sources
+   Patch – apply patches for bug fixes and new capability
+   Configure – set up your environment specifications
+   Build – compile and link
+   Install – copy files to target directories
+   Package – bundle files for installation
+
+
+
+SMA: Read Later
+===============================================================================
+***** https://wiki.yoctoproject.org/wiki/TipsAndTricks
+
+
+
+
+BBPATH
+
+$ bitbake -e | grep ^BBPATH=
+BBPATH="/home/smalinux/repos/yocto/poky/meta-poky:/home/smalinux/repos/yocto/build_bbb:/home/smalinux/repos/yocto/poky/meta:/home/smalinux/repos/yocto/poky/meta-yocto-bsp:/home/smalinux/repos/yocto/meta-arm/meta-arm:/home/smalinux/repos/yocto/meta-arm/meta-arm-toolchain:/home/smalinux/repos/yocto/meta-ti/meta-ti-bsp:/home/smalinux/repos/yocto/meta-ti/meta-ti-extras:/home/smalinux/repos/yocto/meta-bbb"
+
+
+docs: any variables
+https://docs.yoctoproject.org/ref-manual/variables.html

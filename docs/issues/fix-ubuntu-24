@@ -1,0 +1,5 @@
+
+https://lists.yoctoproject.org/g/yocto/topic/workaround_for_uid_map_error/106192359
+
+
+echo 0 > /proc/sys/kernel/apparmor_restrict_unprivileged_userns && exit
