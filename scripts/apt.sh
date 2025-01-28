@@ -1,25 +1,41 @@
 #!/bin/bash
+#
+# https://docs.yoctoproject.org/brief-yoctoprojectqs/index.html#build-host-packages
 
-yes | sudo apt install picocom
+sudo apt -y install picocom
 
-yes | sudo apt install libssl-dev device-tree-compiler swig \
+sudo apt -y install libssl-dev device-tree-compiler swig \
 python3-dev python3-setuptools
 
 # Ready-made Toolchains
-yes | sudo apt-get install gcc-aarch64-linux-gnu
+sudo apt -y install gcc-aarch64-linux-gnu
 
 # Needed packages for Crosstool-ng
-yes | sudo apt install build-essential git autoconf bison flex texinfo \
+sudo apt -y install build-essential git autoconf bison flex texinfo \
 help2man gawk libtool-bin libncurses5-dev unzip
 
 # qemu
-yes | sudo apt install qemu-user
+sudo apt -y install qemu-user
 
 # TFTP
-yes | sudo apt-get install tftpd-hpa
+sudo apt -y install tftpd-hpa
+
+# Install and configure a DHCP server
+sudo apt -y install isc-dhcp-server
 
 # NFS server
-yes | sudo apt-get install nfs-kernel-server
+sudo apt -y install nfs-kernel-server
 
 # bmaptool
-yes | sudo apt-get install bmap-tools
+sudo apt -y install bmap-tools
+
+
+# fastboot
+sudo apt -y install google-android-platform-tools-installer
+
+# UART flashing
+sudo apt -y install lrzsz
+
+# Yocto Dependences
+sudo apt -y install lz4 diffstat
+
