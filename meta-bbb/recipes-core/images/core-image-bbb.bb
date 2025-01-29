@@ -2,8 +2,9 @@ SUMMARY = "BBB image is my first image ever!"
 
 #IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL}"
 IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} \
-    vim openssh \
-    python3 python3-pip"
+    vim-tiny openssh \
+    python3 python3-pip \
+    kmod"
 
 IMAGE_LINGUAS = " "
 
