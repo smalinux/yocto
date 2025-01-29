@@ -1,6 +1,3 @@
-build_bbb/cache
-build_bbb/deploy-ti
-build_bbb/sstate-cache
-build_bbb/tmp
-build_bbb/bitbake-cookerdaemon.log
-build_bbb/bitbake.lock
+build/beaglebone/cache
+build/beaglebone/bitbake-cookerdaemon.log
+build/beaglebone/bitbake.lock

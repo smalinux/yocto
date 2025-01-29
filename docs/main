@@ -1,6 +1,8 @@
 SMA: URLs
 SMA: quality
 SMA: Read Later
+SMA: Quilt
+SMA: modify_package
 
 
 SMA: URLs
@@ -46,3 +48,51 @@ BBPATH="/home/smalinux/repos/yocto/poky/meta-poky:/home/smalinux/repos/yocto/bui
 
 docs: any variables
 https://docs.yoctoproject.org/ref-manual/variables.html
+
+
+===============================================================================
+SMA: Quilt
+===============================================================================
+#!/bin/env python3
+#
+# Quilt workflow - https://docs.yoctoproject.org/dev-manual/quilt.html
+#  1. change kmod package
+#  2. rebuild kmod package
+#  3. integragte it into your image
+#
+#
+
+$ bitbake -e kmod | grep ^S=
+$ cd ${S}
+$ quilt new my_changes.patch
+$ quilt add tools/kmod.c
+<Edit the Files>
+$ bitbake -c compile -f kmod
+$ quilt refresh
+$ SRC_URI += "file://my_changes.patch"
+
+
+===============================================================================
+SMA: modify_package
+===============================================================================
+
+
+#!/bin/env python3
+#
+#  The workflow to change openssl or any package and shipping it into Yocto
+#  image.
+#
+#  1. change openssl package
+#  2. rebuild openssl package
+#  3. integragte it into your image
+#
+#
+
+$ bitbake -e openssl | grep ^S=
+$ cd ${S}
+<Edit the Files>
+<Edit the Files>
+<Edit the Files>
+bitbake -c compile -f openssl
+bitbake -f openssl
+./make.sh
