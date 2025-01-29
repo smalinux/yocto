@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 # Settings
 # --------------
 THIS_FILE=$(realpath "$(dirname "${BASH_SOURCE[0]}")")
