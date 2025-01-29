@@ -39,3 +39,11 @@ sudo apt -y install lrzsz
 # Yocto Dependences
 sudo apt -y install lz4 diffstat
 
+# Quilt
+sudo apt -y install quilt
+
+# linux kernel cross-compiler
+sudo apt -y install gcc-arm-linux-gnueabihf
+
+
+
