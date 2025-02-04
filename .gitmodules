@@ -7,3 +7,6 @@
 [submodule "meta-ti"]
 	path = meta-ti
 	url = https://git.yoctoproject.org/git/meta-ti
+[submodule "yocto-docs"]
+	path = yocto-docs
+	url = https://git.yoctoproject.org/yocto-docs/
