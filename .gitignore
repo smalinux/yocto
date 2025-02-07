@@ -1,3 +1,7 @@
 build/beaglebone/cache
 build/beaglebone/bitbake-cookerdaemon.log
 build/beaglebone/bitbake.lock
+
+build/bbb/cache
+build/bbb/bitbake-cookerdaemon.log
+build/bbb/bitbake.lock
