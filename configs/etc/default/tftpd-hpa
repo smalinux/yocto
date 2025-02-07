@@ -1,7 +1,7 @@
 # /etc/default/tftpd-hpa
 
 TFTP_USERNAME="tftp"
-# I don't like: "beaglebone" here, fix local.conf
-TFTP_DIRECTORY="/mnt/_OUTPUT/tmp/deploy/beaglebone/images/"
+TFTP_DIRECTORY="/mnt/_OUTPUT/tmp/deploy/images/"
+#TFTP_DIRECTORY="/mnt/_OUTPUT/tmp/deploy/beaglebone/images/"
 TFTP_OPTIONS="--secure --create"
 TFTP_ADDRESS=":69"
