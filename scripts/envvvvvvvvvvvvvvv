@@ -1,1 +1,20 @@
-setenv machine beaglebone; env set netload 'tftpboot ${loadaddr} ${machine}/${image};tftpboot ${fdtaddr} ${machine}/${fdt_file}'; env set netargs 'setenv bootargs console=${console} ${optargs} root=/dev/nfs nfsrootdebug ip=${ipaddr} nfsroot=${serverip}:${nfsroot},v3,tcp'; env set netboot 'echo Booting from net ...;run netargs;run netload;bootz ${loadaddr} - ${fdtaddr}'; env set serverip 192.168.0.134; env set nfsroot "/mnt/_OUTPUT/rootfs/${machine}/target"; env set image zImage; env set fdt_file am335x-boneblack-beaglebone.dtb; env set ipaddr 192.168.0.90; env set bootcmd 'run netboot'; saveenv
+setenv machine beaglebone;
+env set netload 'tftpboot ${loadaddr} ${machine}/${image};
+tftpboot ${fdtaddr} ${machine}/${fdt_file}';
+env set netargs 'setenv bootargs console=${console} ${optargs} root=/dev/nfs nfsrootdebug ip=${ipaddr} nfsroot=${serverip}:${nfsroot},v3,tcp';
+# add extra debug verbose: rootwait debug loglevel=7 earlyprintk ignore_loglevel initcall_debug
+# env set netargs 'setenv bootargs console=${console} ${optargs} root=/dev/nfs rootwait debug loglevel=7 earlyprintk ignore_loglevel initcall_debug nfsrootdebug ip=${ipaddr} nfsroot=${serverip}:${nfsroot},v3,tcp';
+env set netboot 'echo Booting from net ...;
+run netargs;
+run netload;
+bootz ${loadaddr} - ${fdtaddr}';
+env set serverip 192.168.0.134;
+env set nfsroot "/mnt/_OUTPUT/rootfs/${machine}/target";
+env set image zImage;
+env set fdt_file am335x-boneblack-beaglebone.dtb;
+env set ipaddr 192.168.0.90;
+env set bootcmd 'run netboot';
+saveenv
+
+
+setenv machine bbb; env set netload 'tftpboot ${loadaddr} ${machine}/${image};tftpboot ${fdtaddr} ${machine}/${fdt_file}'; env set netargs 'setenv bootargs console=${console} ${optargs} root=/dev/nfs nfsrootdebug ip=${ipaddr} nfsroot=${serverip}:${nfsroot},v3,tcp'; env set netboot 'echo Booting from net ...;run netargs;run netload;bootz ${loadaddr} - ${fdtaddr}'; env set serverip 192.168.0.134; env set nfsroot "/mnt/_OUTPUT/rootfs/${machine}/target"; env set image zImage; env set fdt_file am335x-boneblack-${machine}.dtb; env set ipaddr 192.168.0.90; env set bootcmd 'run netboot'; saveenv
