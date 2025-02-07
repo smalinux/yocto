@@ -38,6 +38,8 @@ PANE3_2="/home/smalinux/repos/yocto/"
 PANE4_1="/home/smalinux/repos/yocto/"
 PANE4_2="/home/smalinux/repos/yocto/"
 
+PANE5_1="/home/smalinux/repos/yocto/yocto-docs/"
+
 # (TEMPLATE)
 #PANE4_1="/home/smalinux/repos/yocto/"
 #PANE4_2="/home/smalinux/repos/yocto/"
@@ -77,6 +79,10 @@ tmux new-window -t $SESSION -n "tig"
 tmux send-keys -t $SESSION:4.1 "cd $PANE4_1" C-m
 tmux split-window -h -t $SESSION:$i
 tmux send-keys -t $SESSION:4.2 "cd $PANE4_2" C-m
+
+# Create Window #5: tig
+tmux new-window -t $SESSION -n "yocto-docs"
+tmux send-keys -t $SESSION:5.1 "cd $PANE4_1" C-m
 
 # (TEMPLATE)
 ## Create Window #4: tig
