@@ -13,3 +13,9 @@ sudo ln -sf $SCRIPTS_DIR/../configs/etc/default/isc-dhcp-server /etc/default/isc
 
 # NFS
 sudo ln -sf $SCRIPTS_DIR/../configs/etc/exports /etc/exports
+
+
+# Rootfs-s
+sudo mount --bind /mnt/_OUTPUT/tmp/deploy/images/ /srv/tftp/
+
+
