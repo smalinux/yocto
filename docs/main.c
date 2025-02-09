@@ -3,6 +3,9 @@ SMA: quality
 SMA: Read Later
 SMA: Quilt
 SMA: modify_package
+SMA: SDKs
+SMA: Debug techniques bitbake
+
 
 Layer
 devtool
@@ -241,6 +244,64 @@ $
 ===============================================================================
 Check if recipe exist or not
    $ bitbake-layers show-recipes | grep vim
+
+
+
+Q: I want to see var Yocto vars, all at once before build
+===============================================================================
+   $ bitbake -e > full
+
+
+SMA: SDKs
+===============================================================================
+* Write userlevel apps using cross-toolchain
+* Two ways:
+   1. classic way
+   2. extended way (not jsut apps, also devtool, recipes)
+
+Classic way
+++++++++++++
+   $ bitbake core-image-bbb -c populate_sdk
+   $ tmp/deploy/sdk/bla.sh
+      repo/sdk/{MACHINE}/
+   $ cd repo/sdk/{MACHINE}/environment-setup
+   $ source environment-setup-blabla
+   ...
+   ...
+   $ vim hello_world.c
+   $ $CC  hello_world.c -o hello_world
+   $ scp hello_world root@192.168.7.2:/home/root/
+
+
+
+extended way
+++++++++++++
+   $ bitbake core-image-bbb -c populate_sdk_ext
+
+
+
+SMA: Debug techniques bitbake
+===============================================================================
+
+1)
+   $ bitbake core-image-bbb -DDD > full
+
+
+
+
+
+
+
+SMA: size of current Image
+===============================================================================
+root@bbb:~# du -hs .
+   8.0K    .
+
+root@bbb:~# df -h
+
+
+
+
 
 
 
