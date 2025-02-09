@@ -14,8 +14,11 @@ sudo ln -sf $SCRIPTS_DIR/../configs/etc/default/isc-dhcp-server /etc/default/isc
 # NFS
 sudo ln -sf $SCRIPTS_DIR/../configs/etc/exports /etc/exports
 
-
 # Rootfs-s
-sudo mount --bind /mnt/_OUTPUT/tmp/deploy/images/ /srv/tftp/
+#sudo mount --bind /mnt/_OUTPUT/tmp/deploy/images/ /srv/tftp/
 
+# sudo systemctl daemon-reload
+# sudo systemctl enable srv-tftp-mount.service
+# sudo systemctl start srv-tftp-mount.service
+sudo ln -sf $SCRIPTS_DIR/../configs/etc/systemd/system/srv-tftp-mount.service /etc/systemd/system/srv-tftp-mount.service
 
