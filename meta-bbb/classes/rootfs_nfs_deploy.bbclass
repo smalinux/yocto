@@ -39,14 +39,14 @@ python nfs_rootfs_deploy() {
             # Extract each member manually to ensure overwriting
             tar.extract(member, tmp_rootfs)
 
-    # Extract rootfs tarball to the target directory, forcibly overwriting if necessary
-    with tarfile.open(rootfs_tarball, "r:xz") as tar:
-        for member in tar.getmembers():
-            # Extract each member manually to ensure overwriting
-            tar.extract(member, rootfs_nfs_dir)
+    ## Extract rootfs tarball to the target directory, forcibly overwriting if necessary
+    #with tarfile.open(rootfs_tarball, "r:xz") as tar:
+    #    for member in tar.getmembers():
+    #        # Extract each member manually to ensure overwriting
+    #        tar.extract(member, rootfs_nfs_dir)
 
     # Sync with rsync to ensure complete mirror, including deletions
-    rsync_cmd = f"rsync  -a --delete --ignore-times {tmp_rootfs}/ {rootfs_nfs_dir}/"
+    rsync_cmd = f"/usr/bin/rsync -a --delete --ignore-times {tmp_rootfs}/ {rootfs_nfs_dir}/"
     subprocess.run(rsync_cmd, shell=True, check=True)
 
     # Cleanup temporary extraction directory
