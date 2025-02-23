@@ -3,6 +3,7 @@
 # Settings
 # --------------
 MACHINE=bbb
+#MACHINE=beaglebone
 
 
 # FIXUP Ubuntu 24

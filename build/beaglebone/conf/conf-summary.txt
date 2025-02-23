@@ -1,1 +1,6 @@
 This is the default build configuration for the Poky reference distribution.
+
+
+$ source poky/oe-init-build-env build/beaglebone
+
+
