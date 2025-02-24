@@ -10,3 +10,9 @@
 [submodule "yocto-docs"]
 	path = yocto-docs
 	url = https://git.yoctoproject.org/yocto-docs/
+[submodule "meta-containerization"]
+	path = meta-containerization
+	url = https://github.com/TheYoctoJester/meta-containerization
+[submodule "meta-openembedded"]
+	path = meta-openembedded
+	url = http://git.openembedded.org/meta-openembedded
