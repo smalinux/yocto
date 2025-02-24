@@ -5,3 +5,7 @@ build/beaglebone/bitbake.lock
 build/bbb/cache
 build/bbb/bitbake-cookerdaemon.log
 build/bbb/bitbake.lock
+
+build/container/cache
+build/container/bitbake-cookerdaemon.log
+build/container/bitbake.lock

@@ -1,0 +1,30 @@
+
+### Shell environment set up for builds. ###
+
+You can now run 'bitbake <target>'
+
+Common targets are:
+    container-image-payload
+    or
+    container-image-user-payload
+
+
+    sudo docker import tmp/deploy/images/container-image-payload-containerx86-64.rootfs.tar.bz2 minimalbash
+    or
+    sudo docker import tmp/deploy/images/container-image-user-payload-containerx86-64.rootfs.tar.gz minimaluserbash
+    or
+    sudo docker import container-image-user-payload-containerx86-64.rootfs.tar.gz minimaluserpython
+
+
+   # run
+    sudo docker run  -it --rm minimalbash /bin/bash
+    or
+    sudo docker run  -it --rm -u user minimaluserbash /bin/bash
+    or
+    sudo docker run -it --rm -u user minimaluserpython /usr/bin/python3
+
+
+   # remove
+    sudo docker rmi minimalbash
+    sudo docker rmi minimaluserbash
+    sudo docker rmi minimaluserpython
