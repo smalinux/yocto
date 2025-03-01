@@ -2,9 +2,9 @@
 
 # Settings
 # --------------
-#MACHINE=bbb
+MACHINE=bbb
 #MACHINE=beaglebone
-MACHINE=container
+#MACHINE=container
 
 
 # FIXUP Ubuntu 24
