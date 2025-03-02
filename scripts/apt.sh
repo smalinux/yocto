@@ -47,3 +47,5 @@ sudo apt -y install gcc-arm-linux-gnueabihf
 
 
 
+# for buildhistory-diff tool
+pip3 install GitPython --user --break-system-packages

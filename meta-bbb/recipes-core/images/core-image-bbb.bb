@@ -23,5 +23,6 @@ IMAGE_INSTALL:append = " vim-tiny"
 #IMAGE_INSTALL:append = " dropbear"
 #IMAGE_INSTALL:append = " bc"
 
-# <image>-dev
-#IMAGE_INSTALL:append = " tools-debug"
+# buildhistory
+BUILDHISTORY_IMAGE_FILES:append = " /etc/hostname"
+BUILDHISTORY_IMAGE_FILES:append = " /etc/fstab"

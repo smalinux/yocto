@@ -16,3 +16,6 @@
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = http://git.openembedded.org/meta-openembedded
+[submodule "build/bbb/buildhistory"]
+	path = build/bbb/buildhistory
+	url = https://github.com/smalinux/yocto-buildhistory
