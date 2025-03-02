@@ -45,7 +45,8 @@ sudo apt -y install quilt
 # linux kernel cross-compiler
 sudo apt -y install gcc-arm-linux-gnueabihf
 
-
+# Dependency graphs
+sudo apt -y install python3-pydot graphviz xdot
 
 # for buildhistory-diff tool
 pip3 install GitPython --user --break-system-packages
