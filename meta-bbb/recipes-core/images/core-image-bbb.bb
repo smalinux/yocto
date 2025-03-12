@@ -49,6 +49,7 @@ IMAGE_INSTALL:append = " python3"
 IMAGE_INSTALL:append = " python3-pip"
 IMAGE_INSTALL:append = " openssh"
 IMAGE_INSTALL:append = " vim-tiny"
+IMAGE_INSTALL:append = " util-linux-lsblk"
 #IMAGE_INSTALL:append = " dropbear"
 #IMAGE_INSTALL:append = " bc"
 
