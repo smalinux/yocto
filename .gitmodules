@@ -19,3 +19,6 @@
 [submodule "build/bbb/buildhistory"]
 	path = build/bbb/buildhistory
 	url = https://github.com/smalinux/yocto-buildhistory
+[submodule "meta-rauc"]
+	path = meta-rauc
+	url = https://github.com/rauc/meta-rauc.git
