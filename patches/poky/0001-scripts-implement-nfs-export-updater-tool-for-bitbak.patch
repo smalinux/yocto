@@ -1,0 +1,661 @@
+From 7bb1b99252590bab4ee0992c0dfd70f3e9787813 Mon Sep 17 00:00:00 2001
+From: Enrico Jorns <ejo@pengutronix.de>
+Date: Wed, 26 Apr 2023 15:03:58 +0200
+Subject: [PATCH 1/2] scripts: implement nfs-export-updater tool for bitbake
+
+This tool is an approach to support nfsroot-based development workflows
+for on-target testing with Yocto/OE.
+
+The idea behind this is that you export your bitbake-generated root file
+system over NFS to let your target boot it.
+This tool then allows you to dynamically update the contents of the
+exported rootfs on a per-package base without having to re-generate and
+re-export the entire root file system. This should speed up iterations
+for on-target testing.
+
+Signed-off-by: Enrico Jorns <ejo@pengutronix.de>
+---
+ .github/README.md                          |   1 +
+ README.nfsroot.md                          |  32 +++
+ meta/classes/nfsroot.bbclass               |  42 ++++
+ scripts/lib/nfs_export_updater/__init__.py |   0
+ scripts/lib/nfs_export_updater/pkgindex.py | 242 +++++++++++++++++++++
+ scripts/lib/nfs_export_updater/server.py   |  70 ++++++
+ scripts/nfs-export-updater                 | 184 ++++++++++++++++
+ scripts/runqemu-extract-sdk                |   2 +-
+ 8 files changed, 572 insertions(+), 1 deletion(-)
+ create mode 120000 .github/README.md
+ create mode 100644 README.nfsroot.md
+ create mode 100644 meta/classes/nfsroot.bbclass
+ create mode 100644 scripts/lib/nfs_export_updater/__init__.py
+ create mode 100644 scripts/lib/nfs_export_updater/pkgindex.py
+ create mode 100644 scripts/lib/nfs_export_updater/server.py
+ create mode 100755 scripts/nfs-export-updater
+
+diff --git a/.github/README.md b/.github/README.md
+new file mode 120000
+index 0000000000..37516ac675
+--- /dev/null
++++ b/.github/README.md
+@@ -0,0 +1 @@
++../README.nfsroot.md
+\ No newline at end of file
+diff --git a/README.nfsroot.md b/README.nfsroot.md
+new file mode 100644
+index 0000000000..29002d0d3a
+--- /dev/null
++++ b/README.nfsroot.md
+@@ -0,0 +1,32 @@
++# poky-nfsroot
++
++Example steps to use:
++
++Prepare your `local.conf`:
++
++```
++echo 'INHERIT += "nfsroot"' >> $BUILDDIR/conf/local.conf
++echo 'IMAGE_FSTYPES:append = " tar.gz"' >> $BUILDDIR/conf/local.conf
++```
++
++Build your rootfs recipe:
++
++```
++bitbake my-rootfs-image
++```
++
++Start the update server:
++
++```
++nfs-export-updater --debug my-rootfs-image <exportdir>
++```
++
++This will
++
++- extract the rootfs tar archive to the folder `<exportdir>` if this does not exist yet.
++  If the argument is omitted, the default folder name `nfsroot-<image>-${MACHINE}` will be used instead.
++- start a unfsd instance on this folder
++
++To update the nfsroot, it's sufficient to just build the recipe in question.
++To copy files into the nfsroot, use `nfs-cp`, e.g.
++`nfs-cp ~/nfsroot/myboard fstab /etc/fstab`.
+diff --git a/meta/classes/nfsroot.bbclass b/meta/classes/nfsroot.bbclass
+new file mode 100644
+index 0000000000..3263d367e7
+--- /dev/null
++++ b/meta/classes/nfsroot.bbclass
+@@ -0,0 +1,42 @@
++python nfsroot_eventhandler() {
++    # NFS_UPDATER_INTERNAL is set by nfs-export-updater to prevent calling itself
++    if d.getVar('NFS_UPDATER_INTERNAL'):
++        return
++
++    import socket
++    import os
++
++    # Set the path for the Unix socket
++    socket_path = f"/tmp/nfsup-{os.environ['USER']}-{d.getVar('MACHINE')}.sock"
++
++    # Create the Unix socket client
++    client = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
++
++    try:
++        # Connect to the server
++        client.connect(socket_path)
++    except (ConnectionRefusedError, FileNotFoundError):
++        bb.warn(f'Cannot connect to nfs-export-updater server at {socket_path}, skipping update of nfsroot')
++        client.close()
++        return
++
++    bb.note(f'Notifying nfs-export-updater server..')
++    # Send a message to the server
++    message = 'bitbake_done'
++    client.sendall(message.encode())
++
++    # Receive a response from the server
++    response = client.recv(1024)
++    bb.note(f'Received response: {response.decode()}')
++
++    # Close the connection
++    client.close()
++}
++
++addhandler nfsroot_eventhandler
++nfsroot_eventhandler[eventmask] = "bb.event.BuildCompleted"
++
++# we rely on package-management information in the generated rootfs
++IMAGE_FEATURES += "package-management"
++# The PR server should be running to generate new packages on changes
++PRSERV_HOST ?= "localhost:0"
+diff --git a/scripts/lib/nfs_export_updater/__init__.py b/scripts/lib/nfs_export_updater/__init__.py
+new file mode 100644
+index 0000000000..e69de29bb2
+diff --git a/scripts/lib/nfs_export_updater/pkgindex.py b/scripts/lib/nfs_export_updater/pkgindex.py
+new file mode 100644
+index 0000000000..166bc34a12
+--- /dev/null
++++ b/scripts/lib/nfs_export_updater/pkgindex.py
+@@ -0,0 +1,242 @@
++import os
++import logging
++import subprocess
++import datetime
++
++import oe.path
++from oe.rootfs import generate_index_files
++from oe.package_manager.ipk import OpkgPM
++from oe.package_manager.rpm import RpmPM
++from oe.package_manager.deb import DpkgPM
++
++log = logging.getLogger('nfs-export-updater')
++
++# implement missing 'upgrade' method
++def upgrade(pkgmgr):
++    pkgmgr.deploy_dir_lock()
++
++    cmd = "%s %s upgrade" % (pkgmgr.opkg_cmd, pkgmgr.opkg_args)
++
++    os.environ['D'] = pkgmgr.target_rootfs
++    os.environ['OFFLINE_ROOT'] = pkgmgr.target_rootfs
++    os.environ['IPKG_OFFLINE_ROOT'] = pkgmgr.target_rootfs
++    os.environ['OPKG_OFFLINE_ROOT'] = pkgmgr.target_rootfs
++    os.environ['INTERCEPT_DIR'] = pkgmgr.intercepts_dir
++    os.environ['NATIVE_ROOT'] = pkgmgr.d.getVar('STAGING_DIR_NATIVE')
++
++    try:
++        output = subprocess.check_output(cmd.split(), stderr=subprocess.STDOUT).decode('utf-8')
++        log.debug("Upgrade output:")
++        log.debug(output)
++        for line in output.split('\n'):
++            if line.startswith("Installing"):
++                log.info("Installing: %s" % line.split(" ")[1])
++            if line.startswith("Upgrading"):
++                log.info("Upgrading: %s" % line.split(" ")[1])
++    except subprocess.CalledProcessError as e:
++        pkgmgr.deploy_dir_unlock()
++        print("Unable to update the package index files. Command '%s' "
++                 "returned %d:\n%s" % (cmd, e.returncode, e.output.decode("utf-8")))
++
++    pkgmgr.deploy_dir_unlock()
++
++
++def list_pkgs(pkgmgr):
++    cmd = "%s %s list" % (pkgmgr.opkg_cmd, pkgmgr.opkg_args)
++
++    try:
++        output = subprocess.check_output(cmd.split(), stderr=subprocess.STDOUT)
++        print("Available Packages:")
++        print(output.decode('utf-8'))
++    except subprocess.CalledProcessError as e:
++        pkgmgr.deploy_dir_unlock()
++        print("Unable to update the package index files. Command '%s' "
++                 "returned %d:\n%s" % (cmd, e.returncode, e.output.decode("utf-8")))
++
++
++def add_tool_to_path(tinfoil, native_recipe, toolname, bindir="/usr/bin", pseudo_wrapper=False):
++    # add opkg to PATH
++    rd = tinfoil.parse_recipe(native_recipe)
++    staging_bindir_native = '%s%s' % (rd.getVar("STAGING_DIR_NATIVE"), bindir)
++
++    log.debug("Testing native tool: %s" % os.path.join(staging_bindir_native, toolname))
++    if not os.path.exists(os.path.join(staging_bindir_native, toolname)):
++        log.info(f"Adding '{toolname}' to '{native_recipe}' recipe sysroot")
++        tinfoil.build_targets(native_recipe, task="addto_recipe_sysroot")
++        if not os.path.exists(os.path.join(staging_bindir_native, toolname)):
++            raise Exception(f"Failed adding '{toolname}' to '{native_recipe}' recipe sysroot")
++    else:
++        log.info(f"'{toolname}' already existing in '{native_recipe}' recipe sysroot")
++
++    if pseudo_wrapper:
++        # Create pseudo wrapper for tools
++        rd = tinfoil.parse_recipe("pseudo-native")
++        pseudo_native_prefix = '%s/usr' % rd.getVar("STAGING_DIR_NATIVE")
++        pseudo_native_bin = '%s/bin/pseudo' % pseudo_native_prefix
++        wrapper_path = os.path.join(rd.getVar("TMPDIR"), "pseudo-wrapper/bin")
++        os.makedirs(wrapper_path, exist_ok=True)
++        tool_path = os.path.join(wrapper_path, toolname)
++        with open(tool_path, "w") as f:
++            f.write(f"#!/bin/sh\n{pseudo_native_bin} -P {pseudo_native_prefix} {staging_bindir_native}/{toolname} \"$@\"\n")
++        os.chmod(tool_path, 0o755)
++        os.environ['PATH'] = wrapper_path + ":" + os.environ['PATH']
++    else:
++        os.environ["PATH"] = staging_bindir_native + ":" + os.environ["PATH"]
++
++def add_crosstool_to_path(tinfoil, cross_recipe, toolname, bindir="/usr/bin/crossscripts"):
++    # add opkg to PATH
++    rd = tinfoil.parse_recipe(cross_recipe)
++    staging_bindir_cross = '%s/%s/%s%s' % (rd.getVar("COMPONENTS_DIR"), rd.getVar("MACHINE_ARCH"), cross_recipe, bindir)
++
++    log.debug("Testing cross tool: %s" % os.path.join(staging_bindir_cross, toolname))
++    if not os.path.exists(os.path.join(staging_bindir_cross, toolname)):
++        log.info(f"Adding '{toolname}' to '{cross_recipe}' recipe sysroot")
++        tinfoil.build_targets(cross_recipe)
++        if not os.path.exists(os.path.join(staging_bindir_cross, toolname)):
++            raise Exception(f"Failed adding '{toolname}' to '{cross_recipe}' recipe sysroot")
++    else:
++        log.info(f"'{toolname}' already existing in '{cross_recipe}' recipe sysroot")
++
++    os.environ["PATH"] = staging_bindir_cross + ":" + os.environ["PATH"]
++
++def prepare_native_tools():
++    import bb.tinfoil
++
++    with bb.tinfoil.Tinfoil() as tinfoil:
++        tinfoil.prepare(quiet=1)
++
++        # set to prevent recursive server calls
++        tinfoil.config_data.setVar("NFS_UPDATER_INTERNAL", "1")
++
++        pkg_type = tinfoil.config_data.getVar("PACKAGE_CLASSES").split()[0].replace("package_", "")
++        log.info(f"Creating Carabiner for {pkg_type}")
++
++        # add common tools
++        log.info("Adding required tools to their recipe sysroot...")
++        add_tool_to_path(tinfoil, "virtual/update-alternatives-native", "update-alternatives")
++        add_tool_to_path(tinfoil, "shadow-native", "pwconv", bindir="/usr/sbin")
++        add_tool_to_path(tinfoil, "pseudo-native", "pseudo")
++        add_tool_to_path(tinfoil, "kmod-native", "depmod", bindir="/sbin")
++        add_crosstool_to_path(tinfoil, "depmodwrapper-cross", "depmodwrapper")
++
++        # add package manager-specific tools
++        if pkg_type == 'ipk':
++            add_tool_to_path(tinfoil, "opkg-native", "opkg", pseudo_wrapper=True)
++            # opkg-utils native for opkg-make-index
++            add_tool_to_path(tinfoil, "opkg-utils-native", "opkg-make-index")
++        elif pkg_type == 'rpm':
++            add_tool_to_path(tinfoil, "dnf-native", "dnf")
++            add_tool_to_path(tinfoil, "createrepo-c-native", "createrepo_c")
++        elif pkg_type == 'deb':
++            log.warn("Package type 'deb' is not supported, yet")
++
++        log.debug("Full PATH is now: " + os.environ["PATH"])
++
++
++def write_stamp_file(nfsroot):
++    datetime_now = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
++    stamppath = "/etc/nfs-export-updated"
++    log.info(f"Writing update timestamp {datetime_now} to stamp file {stamppath} ...")
++    with open(oe.path.join(nfsroot, stamppath), "w") as f:
++        f.write(f"{datetime_now}\n")
++
++
++def get_package_manager(d, nfsroot):
++    pkg_type = d.getVar("PACKAGE_CLASSES").split()[0].replace("package_", "")
++
++    if pkg_type == "ipk":
++        # Set up ipkg package feed
++        ipkgconf = d.getVar("IPKGCONF_TARGET")
++        archs = d.getVar("ALL_MULTILIB_PACKAGE_ARCHS")
++        ipk_dir = d.getVar('DEPLOY_DIR_IPK')
++        feed_uris = ""
++        # Create feed uri entries as expected by IPK_FEED_URIS:
++        # Space-seperated list of '<arch>##<uri>' entries
++        for arch in archs.split():
++            # need to filter out non-exisiting dirs to prevent package update
++            # failures
++            if os.path.isdir(os.path.join(ipk_dir, arch)):
++                feed_uris += "%s##file://%s/%s " % (arch, ipk_dir, arch)
++        d.setVar("BUILD_IMAGES_FROM_FEEDS", "1")
++        d.setVar("IPK_FEED_URIS", feed_uris)
++
++        return OpkgPM(d, nfsroot, ipkgconf, archs, prepare_index=False)
++    elif pkg_type == "rpm":
++        log.warning(f"Package type {pkg_type} not supported")
++        target_vendor = d.getVar('TARGET_VENDOR')
++        return RpmPM(d, nfsroot, target_vendor)
++    elif pkg_type == "deb":
++        log.warning(f"Package type {pkg_type} not supported")
++        package_archs = d.getVar('PACKAGE_ARCHS'),
++        dpkg_arch = d.getVar('DPKG_ARCH'),
++        return DpkgPM(d, nfsroot, package_archs, dpkg_arch)
++    else:
++        raise Exception(f"Invalid package type {pkg_type}")
++
++
++def update_packages(rootfs_recipe, nfsroot):
++    import bb.tinfoil
++
++    with bb.tinfoil.Tinfoil() as tinfoil:
++        tinfoil.prepare(quiet=1)
++
++        # set to prevent recursive server calls
++        tinfoil.config_data.setVar("NFS_UPDATER_INTERNAL", "1")
++
++        log.debug(f"Updating nfsroot: {nfsroot}")
++
++        # get packages to install
++        rd = tinfoil.parse_recipe(rootfs_recipe)
++        pkgs = rd.getVar("IMAGE_INSTALL").split()
++        log.info("Package list: %s", pkgs)
++
++        pkgmgr = get_package_manager(rd, nfsroot)
++
++        tinfoil.logger.setLevel(log.getEffectiveLevel())
++
++        log.info("Update from package feeds")
++        pkgmgr.update()
++        #log.info("Removing packages")
++        #pkgmgr.remove(pkgs)
++
++        # determine high level packages to add
++        to_install = []
++        installed_pkgs = pkgmgr.list_installed()
++        for pkg in pkgs:
++            if pkg not in installed_pkgs:
++                to_install.append(pkg)
++
++        log.info("Installing new packages...")
++        if to_install:
++            log.info(f"Packages to install: {to_install}.")
++            pkgmgr.install(pkgs)
++        else:
++            log.info("No packages to install.")
++
++        log.info("Upgrading packages...")
++        upgrade(pkgmgr)
++
++        write_stamp_file(nfsroot)
++        log.info("Updating nfsroot done.")
++
++
++def update_package_index():
++    import bb.tinfoil
++
++    with bb.tinfoil.Tinfoil() as tinfoil:
++        tinfoil.prepare(quiet=1)
++
++        # set to prevent recursive server calls
++        tinfoil.config_data.setVar("NFS_UPDATER_INTERNAL", "1")
++
++        log.info("Updating package index...")
++
++        d = tinfoil.config_data
++        generate_index_files(d)
++
++        log.info("Package index updated.")
++
++
++async def update_nfsroot(rootfs_recipe, nfsroot):
++    update_package_index()
++    update_packages(rootfs_recipe, nfsroot)
+diff --git a/scripts/lib/nfs_export_updater/server.py b/scripts/lib/nfs_export_updater/server.py
+new file mode 100644
+index 0000000000..2e5ec259a2
+--- /dev/null
++++ b/scripts/lib/nfs_export_updater/server.py
+@@ -0,0 +1,70 @@
++import asyncio
++import os
++import logging
++
++from .pkgindex import update_nfsroot
++from .pkgindex import prepare_native_tools
++
++log = logging.getLogger('nfs-export-updater')
++
++
++class NFSRootUpdateServer():
++    def __init__(self, rootfs_recipe, nfsroot_dir):
++        self.rootfs_recipe = rootfs_recipe
++        self.nfsroot_dir = nfsroot_dir
++
++    async def handle_client(self, reader, writer):
++        is_handling_request = False
++
++        while True:
++            # Receive data from the client
++            data = await reader.read(1024)
++            if not data:
++                break
++
++            message = data.decode()
++            print("Received data:", message)
++
++            if message == "bitbake_done":
++                if is_handling_request:
++                    print("Already handling a request, ignoring...")
++                else:
++                    is_handling_request = True
++                    print("Handling 'bitbake_done'")
++                    # Needs to be handled async because bitbake needs to terminate
++                    # itself first
++                    asyncio.create_task(update_nfsroot(self.rootfs_recipe, self.nfsroot_dir))
++            else:
++                print(f"Got unexpected message: {message}")
++
++            print("Sending respone...")
++            # Process the data (replace with your own logic)
++            response = "Server received: " + message
++
++            # Send a response back to the client
++            writer.write(response.encode())
++            await writer.drain()
++
++            if is_handling_request:
++                break
++
++        print("Client disconnected")
++        writer.close()
++
++    async def start_server(self, sock_instance):
++        log.info("Prepare native tools")
++        prepare_native_tools()
++
++        # Set the path for the Unix domain socket
++        socket_path = f"/tmp/nfsup-{os.environ['USER']}-{sock_instance}.sock"
++
++        # Remove the socket file if it already exists
++        if os.path.exists(socket_path):
++            log.info(f"Removing existing socket path {socket_path}")
++            os.remove(socket_path)
++
++        server = await asyncio.start_unix_server(self.handle_client, path=socket_path)
++        log.info(f"Server is running on {socket_path}")
++
++        async with server:
++            await server.serve_forever()
+diff --git a/scripts/nfs-export-updater b/scripts/nfs-export-updater
+new file mode 100755
+index 0000000000..6cac06b603
+--- /dev/null
++++ b/scripts/nfs-export-updater
+@@ -0,0 +1,184 @@
++#!/usr/bin/env python3
++
++# OpenEmbedded nfsroot updater
++#
++# Copyright (C) 2023 Pengutronix
++#
++# SPDX-License-Identifier: GPL-2.0-only
++#
++import os
++import sys
++import argparse
++import logging
++import subprocess
++import re
++script_path = os.path.dirname(os.path.realpath(__file__))
++lib_path = script_path + '/lib'
++sys.path = sys.path + [lib_path]
++import scriptutils
++logger = scriptutils.logger_create('nfs-export-updater')
++import scriptpath
++scriptpath.add_oe_lib_path()
++
++import asyncio
++
++from nfs_export_updater.server import NFSRootUpdateServer
++
++logger = logging.getLogger('nfs-export-updater')
++
++
++def create_nfs_exportdir(rootfs, extract_dir):
++    unpack_archive = None
++
++    import bb.tinfoil
++    with bb.tinfoil.Tinfoil() as tinfoil:
++        tinfoil.prepare(quiet=1)
++
++        rd = tinfoil.parse_recipe(rootfs)
++        src_prefix = os.path.join(rd.getVar('DEPLOY_DIR_IMAGE'), rd.getVar('IMAGE_LINK_NAME'))
++        for suffix in ['.tar.bz2', '.tar.gz']:
++            check_path  = f"{src_prefix}{suffix}"
++            logging.debug(f"checking archive path {check_path}")
++            if os.path.exists(check_path):
++                unpack_archive = check_path
++                logging.debug(f"Found existing archive at {check_path}")
++                break
++
++    if not unpack_archive:
++        logger.error(f"Unable to unpack: Could not find rootfs archive. Did you run 'bitbake {rootfs}'?")
++        sys.exit(1)
++
++    cmd = ('bitbake', 'qemu-helper-native', '-caddto_recipe_sysroot')
++    logger.info('Running %s...' % str(cmd))
++    subprocess.check_call(cmd)
++
++    cmd = ('runqemu-extract-sdk', unpack_archive, extract_dir)
++    logger.info('Running %s...' % str(cmd))
++    subprocess.check_call(cmd)
++
++
++def check_free_port(host, port):
++    """ Check whether the port is free or not """
++    import socket
++    from contextlib import closing
++
++    with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as sock:
++        if sock.connect_ex((host, port)) == 0:
++            # Port is open, so not free
++            return False
++        else:
++            # Port is not open, so free
++            return True
++
++
++def setup_nfs_exporter(rootfs):
++    nfs_instance = 0
++
++    nfsd_port = 3048 + nfs_instance
++    while not check_free_port('localhost', nfsd_port):
++        nfs_instance += 1
++        nfsd_port += 1
++
++    mountd_port = nfsd_port
++
++    # Export vars for runqemu-export-rootfs
++    export_dict = {
++        'NFS_INSTANCE': nfs_instance,
++        'NFSD_PORT': nfsd_port,
++        'MOUNTD_PORT': mountd_port,
++    }
++    for k, v in export_dict.items():
++        # Use '%s' since they are integers
++        os.putenv(k, '%s' % v)
++
++    cmd = ('bitbake', 'qemu-helper-native', '-caddto_recipe_sysroot')
++    logger.info('Running %s...' % str(cmd))
++    subprocess.check_call(cmd)
++
++    # Start the userspace NFS server
++    cmd = ('runqemu-export-rootfs', 'start', rootfs)
++    logger.info('Running %s...' % str(cmd))
++    subprocess.check_call(cmd)
++
++
++def stop_nfs_exporter(rootfs):
++    logger.info("Shutting down the userspace NFS server...")
++    cmd = ("runqemu-export-rootfs", "stop", rootfs)
++    logger.debug('Running %s' % str(cmd))
++    subprocess.check_call(cmd)
++
++
++def main():
++    parser = argparse.ArgumentParser(description='''
++NFS export update server for bitbake
++
++Required steps before starting the server are:
++
++- Add `INHERIT += "nfsroot"` to local.conf or another config file and build a root file system image.
++
++You can now modify and update individual packages by running 'bitbake <package>'.
++''', formatter_class=argparse.RawDescriptionHelpFormatter)
++    parser.add_argument('rootfs', help='rootfs recipe', action='store')
++    parser.add_argument('exportdir', help='nfs root export directory', action='store', nargs='?', default=None)
++    parser.add_argument('-d', '--debug', help='Enable debug output', action='store_true')
++
++    args = parser.parse_args()
++
++    if args.debug:
++        logging.getLogger().setLevel(logging.DEBUG)
++    else:
++        logging.getLogger().setLevel(logging.INFO)
++
++    import bb.tinfoil
++    with bb.tinfoil.Tinfoil() as tinfoil:
++        tinfoil.prepare(quiet=1)
++
++        b_topdir = tinfoil.config_data.getVar('TOPDIR')
++        b_machine = tinfoil.config_data.getVar('MACHINE')
++
++    # figure out default nfsroot directory to use
++    # will be of form ${TOPDIR}/nfsroot-{rootfs}-${MACHINE}'
++    if not args.exportdir:
++        args.exportdir = '%s/nfsroot-%s-%s' % (b_topdir, args.rootfs, b_machine)
++        logging.info(f"Using {args.exportdir} as nfsroot export dir")
++
++    if not os.path.isabs(args.exportdir):
++        args.exportdir = os.path.abspath(args.exportdir)
++
++    if not os.path.exists(args.exportdir):
++        logger.info(f"{args.exportdir} does not exist. Creating it..")
++
++        create_nfs_exportdir(args.rootfs, args.exportdir)
++
++    setup_nfs_exporter(args.exportdir)
++    print("\n") # for visibility of nfs option printout
++
++    # needs to be consistent with runqemu-export-rootfs
++    pseudo_localstatedir = os.path.join(
++            args.exportdir,
++            '..',
++            os.path.basename(args.exportdir) + '.pseudo_state')
++
++    if not os.path.exists(pseudo_localstatedir):
++        logger.error(f"{pseudo_localstatedir} does not exist. Maybe runqemu-export-rootfs failed to run?")
++        sys.exit(1)
++
++    os.environ['PSEUDO_LOCALSTATEDIR'] = pseudo_localstatedir
++    logger.info("PSEUDO_LOCALSTATEDIR is %s" % os.environ['PSEUDO_LOCALSTATEDIR'])
++
++    server = NFSRootUpdateServer(args.rootfs, args.exportdir)
++
++    logger.info(f"NFS export dir ist at {args.exportdir}")
++    logger.info("Starting server..")
++
++    try:
++        # Start the server
++        asyncio.run(server.start_server(b_machine))
++    except (KeyboardInterrupt, asyncio.CancelledError):
++        pass
++    finally:
++        stop_nfs_exporter(args.exportdir)
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/scripts/runqemu-extract-sdk b/scripts/runqemu-extract-sdk
+index db05da25f2..9c5672c69e 100755
+--- a/scripts/runqemu-extract-sdk
++++ b/scripts/runqemu-extract-sdk
+@@ -87,7 +87,7 @@ echo "Extracting rootfs tarball using pseudo..."
+ echo "$PSEUDO $PSEUDO_OPTS tar -C \"$SDK_ROOTFS_DIR\" $TAR_OPTS \"$ROOTFS_TARBALL\""
+ $PSEUDO $PSEUDO_OPTS tar -C "$SDK_ROOTFS_DIR" $TAR_OPTS "$ROOTFS_TARBALL"
+ 
+-DIRCHECK=`ls -l "$SDK_ROOTFS_DIR" | wc -l`
++DIRCHECK=`ls -lH "$SDK_ROOTFS_DIR" | wc -l`
+ if [ "$DIRCHECK" -lt 5 ]; then
+ 	echo "Warning: I don't see many files in $SDK_ROOTFS_DIR"
+ 	echo "Please double-check the extraction worked as intended"
+-- 
+2.43.0
+
