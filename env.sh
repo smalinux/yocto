@@ -33,6 +33,6 @@ cd $THIS_FILE
 # TFTP server
 # For mountint zImage and dtb files under /srv/tftp/MACHINE
 #
-sudo mount --bind ${IMAGE} /srv/tftp/
-sudo systemctl restart tftpd-hpa
+#sudo mount --bind ${IMAGE} /srv/tftp/
+#sudo systemctl restart tftpd-hpa
 # -----------------
