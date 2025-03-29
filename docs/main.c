@@ -16,6 +16,7 @@ SMA: yocto-docs
 SMA: bbclass
 SMA: initramfs
 SMA: flash sdcard
+SMA: nginx as TFTP server
 
 
 
@@ -457,4 +458,25 @@ $ recipetool -h
 SMA: flash sdcard
 ===============================================================================
 $ sudo bmaptool copy core-image-bbb-bbb.rootfs.wic.xz /dev/sdX
+
+
+
+
+How to debug barebox recipes & bbclass:
+    bitbake barebox -c devshell
+    find run.do_configure   # or cd .. and find again
+    ./run.do_configure
+
+
+SMA: nginx as TFTP server
+===============================================================================
+
+Ubuntu@yocto $ sudo apt install nginx
+
+sudo chown -R www-data:www-data /mnt/_OUTPUT/tftpd/
+sudo chmod -R 755 /mnt/_OUTPUT/tftpd/
+
+
+sudo useradd -r -d /var/cache/nginx -s /sbin/nologin nginx
+
 
