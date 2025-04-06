@@ -1,12 +1,14 @@
 
+Build the system image:
+
+    # source env.sh
+    $ bitbake core-image-bbb
+
 ## nfsroot
 
 Start the update server:
 
-```
-# nfs-export-updater --debug <my-rootfs-image> <exportdir>
-nfs-export-updater --debug core-image-bbb
-```
+    $ nfs-export-updater --debug core-image-bbb
 
 This will
 
@@ -21,18 +23,51 @@ nfs-cp ~/nfsroot/myboard fstab /etc/fstab
 ```
 
 
+## Rauc
+
+### Build and Install The Demo Bundle
+
+To build the bundle, run:
+
+    $ bitbake core-image-bbb
+    $ bitbake update-bundle
+
+Copy the generated bundle to the target system via nc, scp or an attached USB stick.
+
+On the target, you can then install the bundle:
+
+    # rauc install /path/to/bundle.raucb
+
+First Flash & Run:
+
+    $ bmaptool copy /path/to/core-image-minimal-bbb.wic.xz /dev/sdX
+    $ scp update-bundle-bbb.raucb root@192.168.0.19:/tmp/
+
+
+Then power-on the board and log in.
+To see that RAUC is configured correctly and can interact with the bootloader,
+run:
+
+    # rauc status
+
+
 ## Feature List
 - [x] runqemu support
-- [ ] systemd
+- [x] systemd
+- [ ] eMMC
 - [ ] opk (runtime package management)
-- [ ] A/B updates
-- [ ] Secure Boot
-- [ ] barebox bootloader and uboot
+    - [ ] nginx (http & tftp server)
+- [x] Rauc: OTA firware update, A/B updates
 - [x] nfsroot: NFS dev cycle
+- [ ] Secure Boot
+- [ ] barebox layer / uboot layer
 - [ ] Docker
+    - [ ] CI/CD
 - [ ] kas
 - [ ] initramfs
 - [ ] umpf
 - [ ] licenses/BoM
-- [ ] Unit testing or QA
+- [ ] testing
+    - [ ] Labgrid
+    - [ ] Testing/TDD
 
