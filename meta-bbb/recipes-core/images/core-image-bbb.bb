@@ -50,6 +50,7 @@ IMAGE_INSTALL:append = " python3-pip"
 IMAGE_INSTALL:append = " openssh"
 IMAGE_INSTALL:append = " vim-tiny"
 IMAGE_INSTALL:append = " util-linux-lsblk"
+IMAGE_INSTALL:append = " alsa-plugins alsa-utils alsa-lib alsa-tools alsa-state alsa-equal"
 #IMAGE_INSTALL:append = " dropbear"
 #IMAGE_INSTALL:append = " bc"
 
