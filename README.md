@@ -54,6 +54,7 @@ run:
 ## Feature List
 - [x] runqemu support
 - [x] systemd
+- [x] Audio Support using ALSA & USB [PR #12](https://github.com/smalinux/yocto/pull/12)
 - [ ] eMMC
 - [ ] opk (runtime package management)
     - [ ] nginx (http & tftp server)
