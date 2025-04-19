@@ -26,6 +26,7 @@ SRC_URI = " \
     git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;branch=linux-${LINUX_VERSION}.y \
     file://defconfig \
     file://bbb-gen4-4dcape70t.dts \
+    file://am335x-boneblack.dts \
 "
 
 do_configure:prepend() {
