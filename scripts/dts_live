@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+  echo "Usage: $0 <BEAGLEBONE_IP>"
+  exit 1
+fi
+
+IP="$1"
+USER="root"
+OUTPUT_FILE="device-tree-dump.txt"
+
+echo "Connecting to $IP and dumping live Device Tree..."
+
+ssh ${USER}@${IP} '
+for file in $(find /sys/firmware/devicetree/base -type f); do
+  echo "===== $file ====="
+  if strings "$file" 2>/dev/null | grep -q .; then
+    strings "$file"
+  else
+    hexdump -C "$file"
+  fi
+  echo ""
+done
+' > "$OUTPUT_FILE"
+
+echo "Device Tree content saved to $OUTPUT_FILE"
+
