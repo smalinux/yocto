@@ -1,0 +1,23 @@
+
+am335x-boneblack.dtb
+===============================================================================
+/mnt/_OUTPUT/tmp/poky-bbb-glibc/work/bbb-poky-linux-gnueabi/linux-stable/6.13.1/deploy-linux-stable/am335x-boneblack-bbb.dtb
+===============================================================================
+
+Device tree source code:
+========================
+    cd /mnt/_OUTPUT/tmp/poky-bbb-glibc/work/bbb-poky-linux-gnueabi/linux-stable/6.13.1/git/arch/arm/boot/dts/ti/omap/
+
+    am335x-boneblack.dts
+        #include "am33xx.dtsi"
+            #include <dt-bindings/bus/ti-sysc.h>
+            #include <dt-bindings/gpio/gpio.h>
+            #include <dt-bindings/pinctrl/am33xx.h>
+            #include <dt-bindings/clock/am3.h>
+        #include "am335x-bone-common.dtsi"
+            /include/ "../../tps65217.dtsi"
+        #include "am335x-boneblack-common.dtsi"
+        #include "am335x-boneblack-hdmi.dtsi"
+            #include <dt-bindings/display/tda998x.h>
+            #include <dt-bindings/interrupt-controller/irq.h>
+
