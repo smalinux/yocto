@@ -1,6 +1,0 @@
-# /etc/default/tftpd-hpa
-
-TFTP_USERNAME="tftp"
-TFTP_DIRECTORY="/srv/tftp/"
-TFTP_OPTIONS="--secure --create"
-TFTP_ADDRESS=":69"
