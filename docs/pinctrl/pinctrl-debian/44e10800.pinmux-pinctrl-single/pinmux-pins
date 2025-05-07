@@ -1,0 +1,144 @@
+Pinmux settings per pin
+Format: pin (name): mux_owner gpio_owner hog?
+pin 0 (PIN0): 481d8000.mmc (GPIO UNCLAIMED) function pinmux_emmc_pins group pinmux_emmc_pins
+pin 1 (PIN1): 481d8000.mmc (GPIO UNCLAIMED) function pinmux_emmc_pins group pinmux_emmc_pins
+pin 2 (PIN2): 481d8000.mmc (GPIO UNCLAIMED) function pinmux_emmc_pins group pinmux_emmc_pins
+pin 3 (PIN3): 481d8000.mmc (GPIO UNCLAIMED) function pinmux_emmc_pins group pinmux_emmc_pins
+pin 4 (PIN4): 481d8000.mmc (GPIO UNCLAIMED) function pinmux_emmc_pins group pinmux_emmc_pins
+pin 5 (PIN5): 481d8000.mmc (GPIO UNCLAIMED) function pinmux_emmc_pins group pinmux_emmc_pins
+pin 6 (PIN6): 481d8000.mmc (GPIO UNCLAIMED) function pinmux_emmc_pins group pinmux_emmc_pins
+pin 7 (PIN7): 481d8000.mmc (GPIO UNCLAIMED) function pinmux_emmc_pins group pinmux_emmc_pins
+pin 8 (PIN8): ocp:P8_19_pinmux (GPIO UNCLAIMED) function pinmux_P8_19_default_pin group pinmux_P8_19_default_pin
+pin 9 (PIN9): ocp:P8_13_pinmux (GPIO UNCLAIMED) function pinmux_P8_13_default_pin group pinmux_P8_13_default_pin
+pin 10 (PIN10): ocp:P8_14_pinmux (GPIO UNCLAIMED) function pinmux_P8_14_default_pin group pinmux_P8_14_default_pin
+pin 11 (PIN11): ocp:P8_17_pinmux (GPIO UNCLAIMED) function pinmux_P8_17_default_pin group pinmux_P8_17_default_pin
+pin 12 (PIN12): ocp:P8_12_pinmux (GPIO UNCLAIMED) function pinmux_P8_12_default_pin group pinmux_P8_12_default_pin
+pin 13 (PIN13): ocp:P8_11_pinmux (GPIO UNCLAIMED) function pinmux_P8_11_default_pin group pinmux_P8_11_default_pin
+pin 14 (PIN14): ocp:P8_16_pinmux (GPIO UNCLAIMED) function pinmux_P8_16_default_pin group pinmux_P8_16_default_pin
+pin 15 (PIN15): ocp:P8_15_pinmux (GPIO UNCLAIMED) function pinmux_P8_15_default_pin group pinmux_P8_15_default_pin
+pin 16 (PIN16): ocp:P9_15_pinmux (GPIO UNCLAIMED) function pinmux_P9_15_default_pin group pinmux_P9_15_default_pin
+pin 17 (PIN17): ocp:P9_23_pinmux (GPIO UNCLAIMED) function pinmux_P9_23_default_pin group pinmux_P9_23_default_pin
+pin 18 (PIN18): ocp:P9_14_pinmux (GPIO UNCLAIMED) function pinmux_P9_14_default_pin group pinmux_P9_14_default_pin
+pin 19 (PIN19): ocp:P9_16_pinmux (GPIO UNCLAIMED) function pinmux_P9_16_default_pin group pinmux_P9_16_default_pin
+pin 20 (PIN20): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 21 (PIN21): leds (GPIO UNCLAIMED) function user_leds_s0 group user_leds_s0
+pin 22 (PIN22): leds (GPIO UNCLAIMED) function user_leds_s0 group user_leds_s0
+pin 23 (PIN23): leds (GPIO UNCLAIMED) function user_leds_s0 group user_leds_s0
+pin 24 (PIN24): leds (GPIO UNCLAIMED) function user_leds_s0 group user_leds_s0
+pin 25 (PIN25): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 26 (PIN26): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 27 (PIN27): 48038000.mcasp (GPIO UNCLAIMED) function mcasp0_pins group mcasp0_pins
+pin 28 (PIN28): ocp:P9_11_pinmux (GPIO UNCLAIMED) function pinmux_P9_11_default_pin group pinmux_P9_11_default_pin
+pin 29 (PIN29): ocp:P9_13_pinmux (GPIO UNCLAIMED) function pinmux_P9_13_default_pin group pinmux_P9_13_default_pin
+pin 30 (PIN30): ocp:P9_12_pinmux (GPIO UNCLAIMED) function pinmux_P9_12_default_pin group pinmux_P9_12_default_pin
+pin 31 (PIN31): ocp:P8_26_pinmux (GPIO UNCLAIMED) function pinmux_P8_26_default_pin group pinmux_P8_26_default_pin
+pin 32 (PIN32): 481d8000.mmc (GPIO UNCLAIMED) function pinmux_emmc_pins group pinmux_emmc_pins
+pin 33 (PIN33): 481d8000.mmc (GPIO UNCLAIMED) function pinmux_emmc_pins group pinmux_emmc_pins
+pin 34 (PIN34): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 35 (PIN35): ocp:P8_18_pinmux (GPIO UNCLAIMED) function pinmux_P8_18_default_pin group pinmux_P8_18_default_pin
+pin 36 (PIN36): ocp:P8_07_pinmux (GPIO UNCLAIMED) function pinmux_P8_07_default_pin group pinmux_P8_07_default_pin
+pin 37 (PIN37): ocp:P8_08_pinmux (GPIO UNCLAIMED) function pinmux_P8_08_default_pin group pinmux_P8_08_default_pin
+pin 38 (PIN38): ocp:P8_10_pinmux (GPIO UNCLAIMED) function pinmux_P8_10_default_pin group pinmux_P8_10_default_pin
+pin 39 (PIN39): ocp:P8_09_pinmux (GPIO UNCLAIMED) function pinmux_P8_09_default_pin group pinmux_P8_09_default_pin
+pin 40 (PIN40): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 41 (PIN41): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 42 (PIN42): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 43 (PIN43): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 44 (PIN44): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 45 (PIN45): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 46 (PIN46): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 47 (PIN47): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 48 (PIN48): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 49 (PIN49): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 50 (PIN50): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 51 (PIN51): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 52 (PIN52): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 53 (PIN53): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 54 (PIN54): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 55 (PIN55): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 56 (PIN56): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 57 (PIN57): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 58 (PIN58): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 59 (PIN59): 0-0070 (GPIO UNCLAIMED) function nxp_hdmi_bonelt_pins group nxp_hdmi_bonelt_pins
+pin 60 (PIN60): 48060000.mmc (GPIO UNCLAIMED) function pinmux_mmc1_pins group pinmux_mmc1_pins
+pin 61 (PIN61): 48060000.mmc (GPIO UNCLAIMED) function pinmux_mmc1_pins group pinmux_mmc1_pins
+pin 62 (PIN62): 48060000.mmc (GPIO UNCLAIMED) function pinmux_mmc1_pins group pinmux_mmc1_pins
+pin 63 (PIN63): 48060000.mmc (GPIO UNCLAIMED) function pinmux_mmc1_pins group pinmux_mmc1_pins
+pin 64 (PIN64): 48060000.mmc (GPIO UNCLAIMED) function pinmux_mmc1_pins group pinmux_mmc1_pins
+pin 65 (PIN65): 48060000.mmc (GPIO UNCLAIMED) function pinmux_mmc1_pins group pinmux_mmc1_pins
+pin 66 (PIN66): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 67 (PIN67): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 68 (PIN68): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 69 (PIN69): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 70 (PIN70): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 71 (PIN71): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 72 (PIN72): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 73 (PIN73): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 74 (PIN74): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 75 (PIN75): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 76 (PIN76): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 77 (PIN77): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 78 (PIN78): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 79 (PIN79): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 80 (PIN80): 4a100000.ethernet (GPIO UNCLAIMED) function cpsw_default group cpsw_default
+pin 81 (PIN81): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 82 (PIN82): 4a101000.mdio (GPIO UNCLAIMED) function davinci_mdio_default group davinci_mdio_default
+pin 83 (PIN83): 4a101000.mdio (GPIO UNCLAIMED) function davinci_mdio_default group davinci_mdio_default
+pin 84 (PIN84): ocp:P9_22_pinmux (GPIO UNCLAIMED) function pinmux_P9_22_default_pin group pinmux_P9_22_default_pin
+pin 85 (PIN85): ocp:P9_21_pinmux (GPIO UNCLAIMED) function pinmux_P9_21_default_pin group pinmux_P9_21_default_pin
+pin 86 (PIN86): ocp:P9_18_pinmux (GPIO UNCLAIMED) function pinmux_P9_18_default_pin group pinmux_P9_18_default_pin
+pin 87 (PIN87): ocp:P9_17_pinmux (GPIO UNCLAIMED) function pinmux_P9_17_default_pin group pinmux_P9_17_default_pin
+pin 88 (PIN88): 48060000.mmc (GPIO UNCLAIMED) function pinmux_mmc1_pins group pinmux_mmc1_pins
+pin 89 (PIN89): ocp:P9_42_pinmux (GPIO UNCLAIMED) function pinmux_P9_42_default_pin group pinmux_P9_42_default_pin
+pin 90 (PIN90): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 91 (PIN91): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 92 (PIN92): 44e09000.serial (GPIO UNCLAIMED) function pinmux_uart0_pins group pinmux_uart0_pins
+pin 93 (PIN93): 44e09000.serial (GPIO UNCLAIMED) function pinmux_uart0_pins group pinmux_uart0_pins
+pin 94 (PIN94): ocp:P9_20_pinmux (GPIO UNCLAIMED) function pinmux_P9_20_default_pin group pinmux_P9_20_default_pin
+pin 95 (PIN95): ocp:P9_19_pinmux (GPIO UNCLAIMED) function pinmux_P9_19_default_pin group pinmux_P9_19_default_pin
+pin 96 (PIN96): ocp:P9_26_pinmux (GPIO UNCLAIMED) function pinmux_P9_26_default_pin group pinmux_P9_26_default_pin
+pin 97 (PIN97): ocp:P9_24_pinmux (GPIO UNCLAIMED) function pinmux_P9_24_default_pin group pinmux_P9_24_default_pin
+pin 98 (PIN98): 44e0b000.i2c (GPIO UNCLAIMED) function pinmux_i2c0_pins group pinmux_i2c0_pins
+pin 99 (PIN99): 44e0b000.i2c (GPIO UNCLAIMED) function pinmux_i2c0_pins group pinmux_i2c0_pins
+pin 100 (PIN100): 48038000.mcasp (GPIO UNCLAIMED) function mcasp0_pins group mcasp0_pins
+pin 101 (PIN101): 48038000.mcasp (GPIO UNCLAIMED) function mcasp0_pins group mcasp0_pins
+pin 102 (PIN102): ocp:P9_30_pinmux (GPIO UNCLAIMED) function pinmux_P9_30_default_pin group pinmux_P9_30_default_pin
+pin 103 (PIN103): 48038000.mcasp (GPIO UNCLAIMED) function mcasp0_pins group mcasp0_pins
+pin 104 (PIN104): ocp:P9_92_pinmux (GPIO UNCLAIMED) function pinmux_P9_92_default_pin group pinmux_P9_92_default_pin
+pin 105 (PIN105): ocp:P9_27_pinmux (GPIO UNCLAIMED) function pinmux_P9_27_default_pin group pinmux_P9_27_default_pin
+pin 106 (PIN106): ocp:P9_91_pinmux (GPIO UNCLAIMED) function pinmux_P9_91_default_pin group pinmux_P9_91_default_pin
+pin 107 (PIN107): 48038000.mcasp (GPIO UNCLAIMED) function mcasp0_pins group mcasp0_pins
+pin 108 (PIN108): ocp:A15_pinmux (GPIO UNCLAIMED) function pinmux_A15_default_pin group pinmux_A15_default_pin
+pin 109 (PIN109): ocp:P9_41_pinmux (GPIO UNCLAIMED) function pinmux_P9_41_default_pin group pinmux_P9_41_default_pin
+pin 110 (PIN110): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 111 (PIN111): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 112 (PIN112): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 113 (PIN113): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 114 (PIN114): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 115 (PIN115): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 116 (PIN116): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 117 (PIN117): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 118 (PIN118): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 119 (PIN119): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 120 (PIN120): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 121 (PIN121): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 122 (PIN122): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 123 (PIN123): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 124 (PIN124): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 125 (PIN125): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 126 (PIN126): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 127 (PIN127): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 128 (PIN128): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 129 (PIN129): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 130 (PIN130): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 131 (PIN131): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 132 (PIN132): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 133 (PIN133): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 134 (PIN134): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 135 (PIN135): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 136 (PIN136): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 137 (PIN137): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 138 (PIN138): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 139 (PIN139): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 140 (PIN140): (MUX UNCLAIMED) (GPIO UNCLAIMED)
+pin 141 (PIN141): (MUX UNCLAIMED) (GPIO UNCLAIMED)

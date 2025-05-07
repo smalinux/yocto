@@ -1,0 +1,6 @@
+Pin config settings per pin
+Format: pin (name): configs
+pin 0 (ext_wakeup0): input active high
+pin 1 (ext_wakeup1): input active high
+pin 2 (ext_wakeup2): input active high
+pin 3 (ext_wakeup3): input active high

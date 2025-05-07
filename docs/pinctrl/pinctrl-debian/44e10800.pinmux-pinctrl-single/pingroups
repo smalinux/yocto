@@ -1,0 +1,886 @@
+registered pin groups:
+group: pinmux_uart0_pins
+pin 92 (PIN92)
+pin 93 (PIN93)
+
+group: pinmux_mmc1_pins
+pin 88 (PIN88)
+pin 63 (PIN63)
+pin 62 (PIN62)
+pin 61 (PIN61)
+pin 60 (PIN60)
+pin 65 (PIN65)
+pin 64 (PIN64)
+
+group: pinmux_emmc_pins
+pin 32 (PIN32)
+pin 33 (PIN33)
+pin 0 (PIN0)
+pin 1 (PIN1)
+pin 2 (PIN2)
+pin 3 (PIN3)
+pin 4 (PIN4)
+pin 5 (PIN5)
+pin 6 (PIN6)
+pin 7 (PIN7)
+
+group: pinmux_P9_19_default_pin
+pin 95 (PIN95)
+
+group: pinmux_P9_19_gpio_pin
+pin 95 (PIN95)
+
+group: pinmux_P9_19_gpio_pu_pin
+pin 95 (PIN95)
+
+group: pinmux_P9_19_gpio_pd_pin
+pin 95 (PIN95)
+
+group: pinmux_P9_19_gpio_input_pin
+pin 95 (PIN95)
+
+group: pinmux_P9_19_spi_cs_pin
+pin 95 (PIN95)
+
+group: pinmux_P9_19_can_pin
+pin 95 (PIN95)
+
+group: pinmux_P9_19_i2c_pin
+pin 95 (PIN95)
+
+group: pinmux_P9_19_pru_uart_pin
+pin 95 (PIN95)
+
+group: pinmux_P9_19_timer_pin
+pin 95 (PIN95)
+
+group: pinmux_P9_20_default_pin
+pin 94 (PIN94)
+
+group: pinmux_P9_20_gpio_pin
+pin 94 (PIN94)
+
+group: pinmux_P9_20_gpio_pu_pin
+pin 94 (PIN94)
+
+group: pinmux_P9_20_gpio_pd_pin
+pin 94 (PIN94)
+
+group: pinmux_P9_20_gpio_input_pin
+pin 94 (PIN94)
+
+group: pinmux_P9_20_spi_cs_pin
+pin 94 (PIN94)
+
+group: pinmux_P9_20_can_pin
+pin 94 (PIN94)
+
+group: pinmux_P9_20_i2c_pin
+pin 94 (PIN94)
+
+group: pinmux_P9_20_pru_uart_pin
+pin 94 (PIN94)
+
+group: pinmux_P9_20_timer_pin
+pin 94 (PIN94)
+
+group: pinmux_P8_07_default_pin
+pin 36 (PIN36)
+
+group: pinmux_P8_07_gpio_pin
+pin 36 (PIN36)
+
+group: pinmux_P8_07_gpio_pu_pin
+pin 36 (PIN36)
+
+group: pinmux_P8_07_gpio_pd_pin
+pin 36 (PIN36)
+
+group: pinmux_P8_07_gpio_input_pin
+pin 36 (PIN36)
+
+group: pinmux_P8_07_timer_pin
+pin 36 (PIN36)
+
+group: pinmux_P8_08_default_pin
+pin 37 (PIN37)
+
+group: pinmux_P8_08_gpio_pin
+pin 37 (PIN37)
+
+group: pinmux_P8_08_gpio_pu_pin
+pin 37 (PIN37)
+
+group: pinmux_P8_08_gpio_pd_pin
+pin 37 (PIN37)
+
+group: pinmux_P8_08_gpio_input_pin
+pin 37 (PIN37)
+
+group: pinmux_P8_08_timer_pin
+pin 37 (PIN37)
+
+group: pinmux_P8_09_default_pin
+pin 39 (PIN39)
+
+group: pinmux_P8_09_gpio_pin
+pin 39 (PIN39)
+
+group: pinmux_P8_09_gpio_pu_pin
+pin 39 (PIN39)
+
+group: pinmux_P8_09_gpio_pd_pin
+pin 39 (PIN39)
+
+group: pinmux_P8_09_gpio_input_pin
+pin 39 (PIN39)
+
+group: pinmux_P8_09_timer_pin
+pin 39 (PIN39)
+
+group: pinmux_P8_10_default_pin
+pin 38 (PIN38)
+
+group: pinmux_P8_10_gpio_pin
+pin 38 (PIN38)
+
+group: pinmux_P8_10_gpio_pu_pin
+pin 38 (PIN38)
+
+group: pinmux_P8_10_gpio_pd_pin
+pin 38 (PIN38)
+
+group: pinmux_P8_10_gpio_input_pin
+pin 38 (PIN38)
+
+group: pinmux_P8_10_timer_pin
+pin 38 (PIN38)
+
+group: pinmux_P8_11_default_pin
+pin 13 (PIN13)
+
+group: pinmux_P8_11_gpio_pin
+pin 13 (PIN13)
+
+group: pinmux_P8_11_gpio_pu_pin
+pin 13 (PIN13)
+
+group: pinmux_P8_11_gpio_pd_pin
+pin 13 (PIN13)
+
+group: pinmux_P8_11_gpio_input_pin
+pin 13 (PIN13)
+
+group: pinmux_P8_11_qep_pin
+pin 13 (PIN13)
+
+group: pinmux_P8_11_pruout_pin
+pin 13 (PIN13)
+
+group: pinmux_P8_12_default_pin
+pin 12 (PIN12)
+
+group: pinmux_P8_12_gpio_pin
+pin 12 (PIN12)
+
+group: pinmux_P8_12_gpio_pu_pin
+pin 12 (PIN12)
+
+group: pinmux_P8_12_gpio_pd_pin
+pin 12 (PIN12)
+
+group: pinmux_P8_12_gpio_input_pin
+pin 12 (PIN12)
+
+group: pinmux_P8_12_qep_pin
+pin 12 (PIN12)
+
+group: pinmux_P8_12_pruout_pin
+pin 12 (PIN12)
+
+group: pinmux_P8_13_default_pin
+pin 9 (PIN9)
+
+group: pinmux_P8_13_gpio_pin
+pin 9 (PIN9)
+
+group: pinmux_P8_13_gpio_pu_pin
+pin 9 (PIN9)
+
+group: pinmux_P8_13_gpio_pd_pin
+pin 9 (PIN9)
+
+group: pinmux_P8_13_gpio_input_pin
+pin 9 (PIN9)
+
+group: pinmux_P8_13_pwm_pin
+pin 9 (PIN9)
+
+group: pinmux_P8_14_default_pin
+pin 10 (PIN10)
+
+group: pinmux_P8_14_gpio_pin
+pin 10 (PIN10)
+
+group: pinmux_P8_14_gpio_pu_pin
+pin 10 (PIN10)
+
+group: pinmux_P8_14_gpio_pd_pin
+pin 10 (PIN10)
+
+group: pinmux_P8_14_gpio_input_pin
+pin 10 (PIN10)
+
+group: pinmux_P8_14_pwm_pin
+pin 10 (PIN10)
+
+group: pinmux_P8_15_default_pin
+pin 15 (PIN15)
+
+group: pinmux_P8_15_gpio_pin
+pin 15 (PIN15)
+
+group: pinmux_P8_15_gpio_pu_pin
+pin 15 (PIN15)
+
+group: pinmux_P8_15_gpio_pd_pin
+pin 15 (PIN15)
+
+group: pinmux_P8_15_gpio_input_pin
+pin 15 (PIN15)
+
+group: pinmux_P8_15_qep_pin
+pin 15 (PIN15)
+
+group: pinmux_P8_15_pru_ecap_pin
+pin 15 (PIN15)
+
+group: pinmux_P8_15_pruin_pin
+pin 15 (PIN15)
+
+group: pinmux_P8_16_default_pin
+pin 14 (PIN14)
+
+group: pinmux_P8_16_gpio_pin
+pin 14 (PIN14)
+
+group: pinmux_P8_16_gpio_pu_pin
+pin 14 (PIN14)
+
+group: pinmux_P8_16_gpio_pd_pin
+pin 14 (PIN14)
+
+group: pinmux_P8_16_gpio_input_pin
+pin 14 (PIN14)
+
+group: pinmux_P8_16_qep_pin
+pin 14 (PIN14)
+
+group: pinmux_P8_16_pruin_pin
+pin 14 (PIN14)
+
+group: pinmux_P8_17_default_pin
+pin 11 (PIN11)
+
+group: pinmux_P8_17_gpio_pin
+pin 11 (PIN11)
+
+group: pinmux_P8_17_gpio_pu_pin
+pin 11 (PIN11)
+
+group: pinmux_P8_17_gpio_pd_pin
+pin 11 (PIN11)
+
+group: pinmux_P8_17_gpio_input_pin
+pin 11 (PIN11)
+
+group: pinmux_P8_17_pwm_pin
+pin 11 (PIN11)
+
+group: pinmux_P8_18_default_pin
+pin 35 (PIN35)
+
+group: pinmux_P8_18_gpio_pin
+pin 35 (PIN35)
+
+group: pinmux_P8_18_gpio_pu_pin
+pin 35 (PIN35)
+
+group: pinmux_P8_18_gpio_pd_pin
+pin 35 (PIN35)
+
+group: pinmux_P8_18_gpio_input_pin
+pin 35 (PIN35)
+
+group: pinmux_P8_19_default_pin
+pin 8 (PIN8)
+
+group: pinmux_P8_19_gpio_pin
+pin 8 (PIN8)
+
+group: pinmux_P8_19_gpio_pu_pin
+pin 8 (PIN8)
+
+group: pinmux_P8_19_gpio_pd_pin
+pin 8 (PIN8)
+
+group: pinmux_P8_19_gpio_input_pin
+pin 8 (PIN8)
+
+group: pinmux_P8_19_pwm_pin
+pin 8 (PIN8)
+
+group: pinmux_P8_26_default_pin
+pin 31 (PIN31)
+
+group: pinmux_P8_26_gpio_pin
+pin 31 (PIN31)
+
+group: pinmux_P8_26_gpio_pu_pin
+pin 31 (PIN31)
+
+group: pinmux_P8_26_gpio_pd_pin
+pin 31 (PIN31)
+
+group: pinmux_P8_26_gpio_input_pin
+pin 31 (PIN31)
+
+group: pinmux_P9_11_default_pin
+pin 28 (PIN28)
+
+group: pinmux_P9_11_gpio_pin
+pin 28 (PIN28)
+
+group: pinmux_P9_11_gpio_pu_pin
+pin 28 (PIN28)
+
+group: pinmux_P9_11_gpio_pd_pin
+pin 28 (PIN28)
+
+group: pinmux_P9_11_gpio_input_pin
+pin 28 (PIN28)
+
+group: pinmux_P9_11_uart_pin
+pin 28 (PIN28)
+
+group: pinmux_P9_12_default_pin
+pin 30 (PIN30)
+
+group: pinmux_P9_12_gpio_pin
+pin 30 (PIN30)
+
+group: pinmux_P9_12_gpio_pu_pin
+pin 30 (PIN30)
+
+group: pinmux_P9_12_gpio_pd_pin
+pin 30 (PIN30)
+
+group: pinmux_P9_12_gpio_input_pin
+pin 30 (PIN30)
+
+group: pinmux_P9_13_default_pin
+pin 29 (PIN29)
+
+group: pinmux_P9_13_gpio_pin
+pin 29 (PIN29)
+
+group: pinmux_P9_13_gpio_pu_pin
+pin 29 (PIN29)
+
+group: pinmux_P9_13_gpio_pd_pin
+pin 29 (PIN29)
+
+group: pinmux_P9_13_gpio_input_pin
+pin 29 (PIN29)
+
+group: pinmux_P9_13_uart_pin
+pin 29 (PIN29)
+
+group: pinmux_P9_14_default_pin
+pin 18 (PIN18)
+
+group: pinmux_P9_14_gpio_pin
+pin 18 (PIN18)
+
+group: pinmux_P9_14_gpio_pu_pin
+pin 18 (PIN18)
+
+group: pinmux_P9_14_gpio_pd_pin
+pin 18 (PIN18)
+
+group: pinmux_P9_14_gpio_input_pin
+pin 18 (PIN18)
+
+group: pinmux_P9_14_pwm_pin
+pin 18 (PIN18)
+
+group: pinmux_P9_15_default_pin
+pin 16 (PIN16)
+
+group: pinmux_P9_15_gpio_pin
+pin 16 (PIN16)
+
+group: pinmux_P9_15_gpio_pu_pin
+pin 16 (PIN16)
+
+group: pinmux_P9_15_gpio_pd_pin
+pin 16 (PIN16)
+
+group: pinmux_P9_15_gpio_input_pin
+pin 16 (PIN16)
+
+group: pinmux_P9_15_pwm_pin
+pin 16 (PIN16)
+
+group: pinmux_P9_16_default_pin
+pin 19 (PIN19)
+
+group: pinmux_P9_16_gpio_pin
+pin 19 (PIN19)
+
+group: pinmux_P9_16_gpio_pu_pin
+pin 19 (PIN19)
+
+group: pinmux_P9_16_gpio_pd_pin
+pin 19 (PIN19)
+
+group: pinmux_P9_16_gpio_input_pin
+pin 19 (PIN19)
+
+group: pinmux_P9_16_pwm_pin
+pin 19 (PIN19)
+
+group: pinmux_P9_17_default_pin
+pin 87 (PIN87)
+
+group: pinmux_P9_17_gpio_pin
+pin 87 (PIN87)
+
+group: pinmux_P9_17_gpio_pu_pin
+pin 87 (PIN87)
+
+group: pinmux_P9_17_gpio_pd_pin
+pin 87 (PIN87)
+
+group: pinmux_P9_17_gpio_input_pin
+pin 87 (PIN87)
+
+group: pinmux_P9_17_spi_cs_pin
+pin 87 (PIN87)
+
+group: pinmux_P9_17_i2c_pin
+pin 87 (PIN87)
+
+group: pinmux_P9_17_pwm_pin
+pin 87 (PIN87)
+
+group: pinmux_P9_17_pru_uart_pin
+pin 87 (PIN87)
+
+group: pinmux_P9_18_default_pin
+pin 86 (PIN86)
+
+group: pinmux_P9_18_gpio_pin
+pin 86 (PIN86)
+
+group: pinmux_P9_18_gpio_pu_pin
+pin 86 (PIN86)
+
+group: pinmux_P9_18_gpio_pd_pin
+pin 86 (PIN86)
+
+group: pinmux_P9_18_gpio_input_pin
+pin 86 (PIN86)
+
+group: pinmux_P9_18_spi_pin
+pin 86 (PIN86)
+
+group: pinmux_P9_18_i2c_pin
+pin 86 (PIN86)
+
+group: pinmux_P9_18_pwm_pin
+pin 86 (PIN86)
+
+group: pinmux_P9_18_pru_uart_pin
+pin 86 (PIN86)
+
+group: pinmux_P9_21_default_pin
+pin 85 (PIN85)
+
+group: pinmux_P9_21_gpio_pin
+pin 85 (PIN85)
+
+group: pinmux_P9_21_gpio_pu_pin
+pin 85 (PIN85)
+
+group: pinmux_P9_21_gpio_pd_pin
+pin 85 (PIN85)
+
+group: pinmux_P9_21_gpio_input_pin
+pin 85 (PIN85)
+
+group: pinmux_P9_21_spi_pin
+pin 85 (PIN85)
+
+group: pinmux_P9_21_uart_pin
+pin 85 (PIN85)
+
+group: pinmux_P9_21_i2c_pin
+pin 85 (PIN85)
+
+group: pinmux_P9_21_pwm_pin
+pin 85 (PIN85)
+
+group: pinmux_P9_21_pru_uart_pin
+pin 85 (PIN85)
+
+group: pinmux_P9_22_default_pin
+pin 84 (PIN84)
+
+group: pinmux_P9_22_gpio_pin
+pin 84 (PIN84)
+
+group: pinmux_P9_22_gpio_pu_pin
+pin 84 (PIN84)
+
+group: pinmux_P9_22_gpio_pd_pin
+pin 84 (PIN84)
+
+group: pinmux_P9_22_gpio_input_pin
+pin 84 (PIN84)
+
+group: pinmux_P9_22_spi_sclk_pin
+pin 84 (PIN84)
+
+group: pinmux_P9_22_uart_pin
+pin 84 (PIN84)
+
+group: pinmux_P9_22_i2c_pin
+pin 84 (PIN84)
+
+group: pinmux_P9_22_pwm_pin
+pin 84 (PIN84)
+
+group: pinmux_P9_22_pru_uart_pin
+pin 84 (PIN84)
+
+group: pinmux_P9_23_default_pin
+pin 17 (PIN17)
+
+group: pinmux_P9_23_gpio_pin
+pin 17 (PIN17)
+
+group: pinmux_P9_23_gpio_pu_pin
+pin 17 (PIN17)
+
+group: pinmux_P9_23_gpio_pd_pin
+pin 17 (PIN17)
+
+group: pinmux_P9_23_gpio_input_pin
+pin 17 (PIN17)
+
+group: pinmux_P9_23_pwm_pin
+pin 17 (PIN17)
+
+group: pinmux_P9_24_default_pin
+pin 97 (PIN97)
+
+group: pinmux_P9_24_gpio_pin
+pin 97 (PIN97)
+
+group: pinmux_P9_24_gpio_pu_pin
+pin 97 (PIN97)
+
+group: pinmux_P9_24_gpio_pd_pin
+pin 97 (PIN97)
+
+group: pinmux_P9_24_gpio_input_pin
+pin 97 (PIN97)
+
+group: pinmux_P9_24_uart_pin
+pin 97 (PIN97)
+
+group: pinmux_P9_24_can_pin
+pin 97 (PIN97)
+
+group: pinmux_P9_24_i2c_pin
+pin 97 (PIN97)
+
+group: pinmux_P9_24_pru_uart_pin
+pin 97 (PIN97)
+
+group: pinmux_P9_24_pruin_pin
+pin 97 (PIN97)
+
+group: pinmux_P9_26_default_pin
+pin 96 (PIN96)
+
+group: pinmux_P9_26_gpio_pin
+pin 96 (PIN96)
+
+group: pinmux_P9_26_gpio_pu_pin
+pin 96 (PIN96)
+
+group: pinmux_P9_26_gpio_pd_pin
+pin 96 (PIN96)
+
+group: pinmux_P9_26_gpio_input_pin
+pin 96 (PIN96)
+
+group: pinmux_P9_26_uart_pin
+pin 96 (PIN96)
+
+group: pinmux_P9_26_can_pin
+pin 96 (PIN96)
+
+group: pinmux_P9_26_i2c_pin
+pin 96 (PIN96)
+
+group: pinmux_P9_26_pru_uart_pin
+pin 96 (PIN96)
+
+group: pinmux_P9_26_pruin_pin
+pin 96 (PIN96)
+
+group: pinmux_P9_27_default_pin
+pin 105 (PIN105)
+
+group: pinmux_P9_27_gpio_pin
+pin 105 (PIN105)
+
+group: pinmux_P9_27_gpio_pu_pin
+pin 105 (PIN105)
+
+group: pinmux_P9_27_gpio_pd_pin
+pin 105 (PIN105)
+
+group: pinmux_P9_27_gpio_input_pin
+pin 105 (PIN105)
+
+group: pinmux_P9_27_qep_pin
+pin 105 (PIN105)
+
+group: pinmux_P9_27_pruout_pin
+pin 105 (PIN105)
+
+group: pinmux_P9_27_pruin_pin
+pin 105 (PIN105)
+
+group: pinmux_P9_30_default_pin
+pin 102 (PIN102)
+
+group: pinmux_P9_30_gpio_pin
+pin 102 (PIN102)
+
+group: pinmux_P9_30_gpio_pu_pin
+pin 102 (PIN102)
+
+group: pinmux_P9_30_gpio_pd_pin
+pin 102 (PIN102)
+
+group: pinmux_P9_30_gpio_input_pin
+pin 102 (PIN102)
+
+group: pinmux_P9_30_spi_pin
+pin 102 (PIN102)
+
+group: pinmux_P9_30_pwm_pin
+pin 102 (PIN102)
+
+group: pinmux_P9_30_pruout_pin
+pin 102 (PIN102)
+
+group: pinmux_P9_30_pruin_pin
+pin 102 (PIN102)
+
+group: pinmux_P9_41_default_pin
+pin 109 (PIN109)
+
+group: pinmux_P9_41_gpio_pin
+pin 109 (PIN109)
+
+group: pinmux_P9_41_gpio_pu_pin
+pin 109 (PIN109)
+
+group: pinmux_P9_41_gpio_pd_pin
+pin 109 (PIN109)
+
+group: pinmux_P9_41_gpio_input_pin
+pin 109 (PIN109)
+
+group: pinmux_P9_41_timer_pin
+pin 109 (PIN109)
+
+group: pinmux_P9_41_pruin_pin
+pin 109 (PIN109)
+
+group: pinmux_P9_91_default_pin
+pin 106 (PIN106)
+
+group: pinmux_P9_91_gpio_pin
+pin 106 (PIN106)
+
+group: pinmux_P9_91_gpio_pu_pin
+pin 106 (PIN106)
+
+group: pinmux_P9_91_gpio_pd_pin
+pin 106 (PIN106)
+
+group: pinmux_P9_91_gpio_input_pin
+pin 106 (PIN106)
+
+group: pinmux_P9_91_qep_pin
+pin 106 (PIN106)
+
+group: pinmux_P9_91_pruout_pin
+pin 106 (PIN106)
+
+group: pinmux_P9_91_pruin_pin
+pin 106 (PIN106)
+
+group: pinmux_P9_42_default_pin
+pin 89 (PIN89)
+
+group: pinmux_P9_42_gpio_pin
+pin 89 (PIN89)
+
+group: pinmux_P9_42_gpio_pu_pin
+pin 89 (PIN89)
+
+group: pinmux_P9_42_gpio_pd_pin
+pin 89 (PIN89)
+
+group: pinmux_P9_42_gpio_input_pin
+pin 89 (PIN89)
+
+group: pinmux_P9_42_spi_cs_pin
+pin 89 (PIN89)
+
+group: pinmux_P9_42_spi_sclk_pin
+pin 89 (PIN89)
+
+group: pinmux_P9_42_uart_pin
+pin 89 (PIN89)
+
+group: pinmux_P9_42_pwm_pin
+pin 89 (PIN89)
+
+group: pinmux_P9_42_pru_ecap_pin
+pin 89 (PIN89)
+
+group: pinmux_P9_92_default_pin
+pin 104 (PIN104)
+
+group: pinmux_P9_92_gpio_pin
+pin 104 (PIN104)
+
+group: pinmux_P9_92_gpio_pu_pin
+pin 104 (PIN104)
+
+group: pinmux_P9_92_gpio_pd_pin
+pin 104 (PIN104)
+
+group: pinmux_P9_92_gpio_input_pin
+pin 104 (PIN104)
+
+group: pinmux_P9_92_qep_pin
+pin 104 (PIN104)
+
+group: pinmux_P9_92_pruout_pin
+pin 104 (PIN104)
+
+group: pinmux_P9_92_pruin_pin
+pin 104 (PIN104)
+
+group: pinmux_A15_default_pin
+pin 108 (PIN108)
+
+group: pinmux_A15_clkout_pin
+pin 108 (PIN108)
+
+group: pinmux_A15_gpio_pin
+pin 108 (PIN108)
+
+group: pinmux_A15_gpio_pu_pin
+pin 108 (PIN108)
+
+group: pinmux_A15_gpio_pd_pin
+pin 108 (PIN108)
+
+group: cpsw_default
+pin 68 (PIN68)
+pin 69 (PIN69)
+pin 70 (PIN70)
+pin 71 (PIN71)
+pin 72 (PIN72)
+pin 73 (PIN73)
+pin 74 (PIN74)
+pin 75 (PIN75)
+pin 76 (PIN76)
+pin 77 (PIN77)
+pin 78 (PIN78)
+pin 79 (PIN79)
+pin 80 (PIN80)
+
+group: cpsw_sleep
+pin 68 (PIN68)
+pin 69 (PIN69)
+pin 70 (PIN70)
+pin 71 (PIN71)
+pin 72 (PIN72)
+pin 73 (PIN73)
+pin 74 (PIN74)
+pin 75 (PIN75)
+pin 76 (PIN76)
+pin 77 (PIN77)
+pin 78 (PIN78)
+pin 79 (PIN79)
+pin 80 (PIN80)
+
+group: davinci_mdio_default
+pin 82 (PIN82)
+pin 83 (PIN83)
+
+group: davinci_mdio_sleep
+pin 82 (PIN82)
+pin 83 (PIN83)
+
+group: user_leds_s0
+pin 21 (PIN21)
+pin 22 (PIN22)
+pin 23 (PIN23)
+pin 24 (PIN24)
+
+group: mcasp0_pins
+pin 107 (PIN107)
+pin 103 (PIN103)
+pin 101 (PIN101)
+pin 100 (PIN100)
+pin 27 (PIN27)
+
+group: pinmux_i2c0_pins
+pin 98 (PIN98)
+pin 99 (PIN99)
+
+group: nxp_hdmi_bonelt_pins
+pin 40 (PIN40)
+pin 41 (PIN41)
+pin 42 (PIN42)
+pin 43 (PIN43)
+pin 44 (PIN44)
+pin 45 (PIN45)
+pin 46 (PIN46)
+pin 47 (PIN47)
+pin 48 (PIN48)
+pin 49 (PIN49)
+pin 50 (PIN50)
+pin 51 (PIN51)
+pin 52 (PIN52)
+pin 53 (PIN53)
+pin 54 (PIN54)
+pin 55 (PIN55)
+pin 56 (PIN56)
+pin 57 (PIN57)
+pin 58 (PIN58)
+pin 59 (PIN59)
+

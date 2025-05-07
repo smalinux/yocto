@@ -1,0 +1,37 @@
+Requested pin control handlers their pinmux maps:
+device: 44e10800.pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: clkout2-pins (0) function: clkout2-pins (0)
+device: 4819c000.i2c current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: i2c2-pins (1) function: i2c2-pins (1)
+device: 4a100000.switch current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: cpsw-default-pins (3) function: cpsw-default-pins (3)
+  state: sleep
+    type: MUX_GROUP controller pinctrl-single group: cpsw-sleep-pins (4) function: cpsw-sleep-pins (4)
+device: 4a101000.mdio current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: davinci-mdio-default-pins (5) function: davinci-mdio-default-pins (5)
+  state: sleep
+    type: MUX_GROUP controller pinctrl-single group: davinci-mdio-sleep-pins (6) function: davinci-mdio-sleep-pins (6)
+device: leds current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: user-leds-s0-pins (7) function: user-leds-s0-pins (7)
+device: 44e09000.serial current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: uart0-pins (8) function: uart0-pins (8)
+device: 44e0b000.i2c current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: i2c0-pins (9) function: i2c0-pins (9)
+device: 48060000.mmc current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: mmc1-pins (10) function: mmc1-pins (10)
+device: 481d8000.mmc current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: emmc-pins (2) function: emmc-pins (2)
+device: 0-0070 current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: nxp-hdmi-bonelt-pins (11) function: nxp-hdmi-bonelt-pins (11)
+  state: off
+    type: MUX_GROUP controller pinctrl-single group: nxp-hdmi-bonelt-off-pins (12) function: nxp-hdmi-bonelt-off-pins (12)

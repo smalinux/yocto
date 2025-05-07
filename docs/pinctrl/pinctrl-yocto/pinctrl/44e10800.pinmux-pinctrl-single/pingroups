@@ -1,0 +1,109 @@
+registered pin groups:
+group: clkout2-pins
+pin 109 (PIN109)
+
+group: i2c2-pins
+pin 94 (PIN94)
+pin 95 (PIN95)
+
+group: emmc-pins
+pin 32 (PIN32)
+pin 33 (PIN33)
+pin 0 (PIN0)
+pin 1 (PIN1)
+pin 2 (PIN2)
+pin 3 (PIN3)
+pin 4 (PIN4)
+pin 5 (PIN5)
+pin 6 (PIN6)
+pin 7 (PIN7)
+
+group: cpsw-default-pins
+pin 68 (PIN68)
+pin 69 (PIN69)
+pin 70 (PIN70)
+pin 71 (PIN71)
+pin 72 (PIN72)
+pin 73 (PIN73)
+pin 74 (PIN74)
+pin 75 (PIN75)
+pin 76 (PIN76)
+pin 77 (PIN77)
+pin 78 (PIN78)
+pin 79 (PIN79)
+pin 80 (PIN80)
+
+group: cpsw-sleep-pins
+pin 68 (PIN68)
+pin 69 (PIN69)
+pin 70 (PIN70)
+pin 71 (PIN71)
+pin 72 (PIN72)
+pin 73 (PIN73)
+pin 74 (PIN74)
+pin 75 (PIN75)
+pin 76 (PIN76)
+pin 77 (PIN77)
+pin 78 (PIN78)
+pin 79 (PIN79)
+pin 80 (PIN80)
+
+group: davinci-mdio-default-pins
+pin 82 (PIN82)
+pin 83 (PIN83)
+pin 90 (PIN90)
+
+group: davinci-mdio-sleep-pins
+pin 82 (PIN82)
+pin 83 (PIN83)
+pin 90 (PIN90)
+
+group: user-leds-s0-pins
+pin 21 (PIN21)
+pin 22 (PIN22)
+pin 23 (PIN23)
+pin 24 (PIN24)
+
+group: uart0-pins
+pin 92 (PIN92)
+pin 93 (PIN93)
+
+group: i2c0-pins
+pin 98 (PIN98)
+pin 99 (PIN99)
+
+group: mmc1-pins
+pin 88 (PIN88)
+pin 63 (PIN63)
+pin 62 (PIN62)
+pin 61 (PIN61)
+pin 60 (PIN60)
+pin 65 (PIN65)
+pin 64 (PIN64)
+
+group: nxp-hdmi-bonelt-pins
+pin 108 (PIN108)
+pin 40 (PIN40)
+pin 41 (PIN41)
+pin 42 (PIN42)
+pin 43 (PIN43)
+pin 44 (PIN44)
+pin 45 (PIN45)
+pin 46 (PIN46)
+pin 47 (PIN47)
+pin 48 (PIN48)
+pin 49 (PIN49)
+pin 50 (PIN50)
+pin 51 (PIN51)
+pin 52 (PIN52)
+pin 53 (PIN53)
+pin 54 (PIN54)
+pin 55 (PIN55)
+pin 56 (PIN56)
+pin 57 (PIN57)
+pin 58 (PIN58)
+pin 59 (PIN59)
+
+group: nxp-hdmi-bonelt-off-pins
+pin 108 (PIN108)
+

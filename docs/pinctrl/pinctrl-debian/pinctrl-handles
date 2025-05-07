@@ -1,0 +1,632 @@
+Requested pin control handlers their pinmux maps:
+device: 4802a000.i2c current state: default
+  state: default
+device: 4819c000.i2c current state: default
+  state: default
+device: ocp:cape-universal current state: default
+  state: default
+device: 48300100.ecap current state: default
+  state: default
+device: 48300200.pwm current state: default
+  state: default
+device: 48302100.ecap current state: default
+  state: default
+device: 48302200.pwm current state: default
+  state: default
+device: 48304100.ecap current state: default
+  state: default
+device: 48304200.pwm current state: default
+  state: default
+device: 44e09000.serial current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_uart0_pins (0) function: pinmux_uart0_pins (0)
+device: 48022000.serial current state: default
+  state: default
+device: 48024000.serial current state: default
+  state: default
+device: 481a6000.serial current state: default
+  state: default
+device: 481a8000.serial current state: default
+  state: default
+device: 481aa000.serial current state: default
+  state: default
+device: 48060000.mmc current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_mmc1_pins (1) function: pinmux_mmc1_pins (1)
+device: 481d8000.mmc current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_emmc_pins (2) function: pinmux_emmc_pins (2)
+device: 48300180.eqep current state: default
+  state: default
+device: 48302180.eqep current state: default
+  state: default
+device: 48304180.eqep current state: default
+  state: default
+device: ocp:P9_19_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_19_default_pin (3) function: pinmux_P9_19_default_pin (3)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_19_gpio_pin (4) function: pinmux_P9_19_gpio_pin (4)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_19_gpio_pu_pin (5) function: pinmux_P9_19_gpio_pu_pin (5)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_19_gpio_pd_pin (6) function: pinmux_P9_19_gpio_pd_pin (6)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_19_gpio_input_pin (7) function: pinmux_P9_19_gpio_input_pin (7)
+  state: spi_cs
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_19_spi_cs_pin (8) function: pinmux_P9_19_spi_cs_pin (8)
+  state: can
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_19_can_pin (9) function: pinmux_P9_19_can_pin (9)
+  state: i2c
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_19_i2c_pin (10) function: pinmux_P9_19_i2c_pin (10)
+  state: pru_uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_19_pru_uart_pin (11) function: pinmux_P9_19_pru_uart_pin (11)
+  state: timer
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_19_timer_pin (12) function: pinmux_P9_19_timer_pin (12)
+device: ocp:P9_20_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_20_default_pin (13) function: pinmux_P9_20_default_pin (13)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_20_gpio_pin (14) function: pinmux_P9_20_gpio_pin (14)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_20_gpio_pu_pin (15) function: pinmux_P9_20_gpio_pu_pin (15)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_20_gpio_pd_pin (16) function: pinmux_P9_20_gpio_pd_pin (16)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_20_gpio_input_pin (17) function: pinmux_P9_20_gpio_input_pin (17)
+  state: spi_cs
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_20_spi_cs_pin (18) function: pinmux_P9_20_spi_cs_pin (18)
+  state: can
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_20_can_pin (19) function: pinmux_P9_20_can_pin (19)
+  state: i2c
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_20_i2c_pin (20) function: pinmux_P9_20_i2c_pin (20)
+  state: pru_uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_20_pru_uart_pin (21) function: pinmux_P9_20_pru_uart_pin (21)
+  state: timer
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_20_timer_pin (22) function: pinmux_P9_20_timer_pin (22)
+device: ocp:P8_07_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_07_default_pin (23) function: pinmux_P8_07_default_pin (23)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_07_gpio_pin (24) function: pinmux_P8_07_gpio_pin (24)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_07_gpio_pu_pin (25) function: pinmux_P8_07_gpio_pu_pin (25)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_07_gpio_pd_pin (26) function: pinmux_P8_07_gpio_pd_pin (26)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_07_gpio_input_pin (27) function: pinmux_P8_07_gpio_input_pin (27)
+  state: timer
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_07_timer_pin (28) function: pinmux_P8_07_timer_pin (28)
+device: ocp:P8_08_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_08_default_pin (29) function: pinmux_P8_08_default_pin (29)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_08_gpio_pin (30) function: pinmux_P8_08_gpio_pin (30)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_08_gpio_pu_pin (31) function: pinmux_P8_08_gpio_pu_pin (31)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_08_gpio_pd_pin (32) function: pinmux_P8_08_gpio_pd_pin (32)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_08_gpio_input_pin (33) function: pinmux_P8_08_gpio_input_pin (33)
+  state: timer
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_08_timer_pin (34) function: pinmux_P8_08_timer_pin (34)
+device: ocp:P8_09_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_09_default_pin (35) function: pinmux_P8_09_default_pin (35)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_09_gpio_pin (36) function: pinmux_P8_09_gpio_pin (36)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_09_gpio_pu_pin (37) function: pinmux_P8_09_gpio_pu_pin (37)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_09_gpio_pd_pin (38) function: pinmux_P8_09_gpio_pd_pin (38)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_09_gpio_input_pin (39) function: pinmux_P8_09_gpio_input_pin (39)
+  state: timer
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_09_timer_pin (40) function: pinmux_P8_09_timer_pin (40)
+device: ocp:P8_10_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_10_default_pin (41) function: pinmux_P8_10_default_pin (41)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_10_gpio_pin (42) function: pinmux_P8_10_gpio_pin (42)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_10_gpio_pu_pin (43) function: pinmux_P8_10_gpio_pu_pin (43)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_10_gpio_pd_pin (44) function: pinmux_P8_10_gpio_pd_pin (44)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_10_gpio_input_pin (45) function: pinmux_P8_10_gpio_input_pin (45)
+  state: timer
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_10_timer_pin (46) function: pinmux_P8_10_timer_pin (46)
+device: ocp:P8_11_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_11_default_pin (47) function: pinmux_P8_11_default_pin (47)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_11_gpio_pin (48) function: pinmux_P8_11_gpio_pin (48)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_11_gpio_pu_pin (49) function: pinmux_P8_11_gpio_pu_pin (49)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_11_gpio_pd_pin (50) function: pinmux_P8_11_gpio_pd_pin (50)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_11_gpio_input_pin (51) function: pinmux_P8_11_gpio_input_pin (51)
+  state: qep
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_11_qep_pin (52) function: pinmux_P8_11_qep_pin (52)
+  state: pruout
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_11_pruout_pin (53) function: pinmux_P8_11_pruout_pin (53)
+device: ocp:P8_12_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_12_default_pin (54) function: pinmux_P8_12_default_pin (54)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_12_gpio_pin (55) function: pinmux_P8_12_gpio_pin (55)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_12_gpio_pu_pin (56) function: pinmux_P8_12_gpio_pu_pin (56)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_12_gpio_pd_pin (57) function: pinmux_P8_12_gpio_pd_pin (57)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_12_gpio_input_pin (58) function: pinmux_P8_12_gpio_input_pin (58)
+  state: qep
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_12_qep_pin (59) function: pinmux_P8_12_qep_pin (59)
+  state: pruout
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_12_pruout_pin (60) function: pinmux_P8_12_pruout_pin (60)
+device: ocp:P8_13_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_13_default_pin (61) function: pinmux_P8_13_default_pin (61)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_13_gpio_pin (62) function: pinmux_P8_13_gpio_pin (62)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_13_gpio_pu_pin (63) function: pinmux_P8_13_gpio_pu_pin (63)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_13_gpio_pd_pin (64) function: pinmux_P8_13_gpio_pd_pin (64)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_13_gpio_input_pin (65) function: pinmux_P8_13_gpio_input_pin (65)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_13_pwm_pin (66) function: pinmux_P8_13_pwm_pin (66)
+device: ocp:P8_14_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_14_default_pin (67) function: pinmux_P8_14_default_pin (67)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_14_gpio_pin (68) function: pinmux_P8_14_gpio_pin (68)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_14_gpio_pu_pin (69) function: pinmux_P8_14_gpio_pu_pin (69)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_14_gpio_pd_pin (70) function: pinmux_P8_14_gpio_pd_pin (70)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_14_gpio_input_pin (71) function: pinmux_P8_14_gpio_input_pin (71)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_14_pwm_pin (72) function: pinmux_P8_14_pwm_pin (72)
+device: ocp:P8_15_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_15_default_pin (73) function: pinmux_P8_15_default_pin (73)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_15_gpio_pin (74) function: pinmux_P8_15_gpio_pin (74)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_15_gpio_pu_pin (75) function: pinmux_P8_15_gpio_pu_pin (75)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_15_gpio_pd_pin (76) function: pinmux_P8_15_gpio_pd_pin (76)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_15_gpio_input_pin (77) function: pinmux_P8_15_gpio_input_pin (77)
+  state: qep
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_15_qep_pin (78) function: pinmux_P8_15_qep_pin (78)
+  state: pru_ecap
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_15_pru_ecap_pin (79) function: pinmux_P8_15_pru_ecap_pin (79)
+  state: pruin
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_15_pruin_pin (80) function: pinmux_P8_15_pruin_pin (80)
+device: ocp:P8_16_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_16_default_pin (81) function: pinmux_P8_16_default_pin (81)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_16_gpio_pin (82) function: pinmux_P8_16_gpio_pin (82)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_16_gpio_pu_pin (83) function: pinmux_P8_16_gpio_pu_pin (83)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_16_gpio_pd_pin (84) function: pinmux_P8_16_gpio_pd_pin (84)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_16_gpio_input_pin (85) function: pinmux_P8_16_gpio_input_pin (85)
+  state: qep
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_16_qep_pin (86) function: pinmux_P8_16_qep_pin (86)
+  state: pruin
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_16_pruin_pin (87) function: pinmux_P8_16_pruin_pin (87)
+device: ocp:P8_17_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_17_default_pin (88) function: pinmux_P8_17_default_pin (88)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_17_gpio_pin (89) function: pinmux_P8_17_gpio_pin (89)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_17_gpio_pu_pin (90) function: pinmux_P8_17_gpio_pu_pin (90)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_17_gpio_pd_pin (91) function: pinmux_P8_17_gpio_pd_pin (91)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_17_gpio_input_pin (92) function: pinmux_P8_17_gpio_input_pin (92)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_17_pwm_pin (93) function: pinmux_P8_17_pwm_pin (93)
+device: ocp:P8_18_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_18_default_pin (94) function: pinmux_P8_18_default_pin (94)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_18_gpio_pin (95) function: pinmux_P8_18_gpio_pin (95)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_18_gpio_pu_pin (96) function: pinmux_P8_18_gpio_pu_pin (96)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_18_gpio_pd_pin (97) function: pinmux_P8_18_gpio_pd_pin (97)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_18_gpio_input_pin (98) function: pinmux_P8_18_gpio_input_pin (98)
+device: ocp:P8_19_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_19_default_pin (99) function: pinmux_P8_19_default_pin (99)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_19_gpio_pin (100) function: pinmux_P8_19_gpio_pin (100)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_19_gpio_pu_pin (101) function: pinmux_P8_19_gpio_pu_pin (101)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_19_gpio_pd_pin (102) function: pinmux_P8_19_gpio_pd_pin (102)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_19_gpio_input_pin (103) function: pinmux_P8_19_gpio_input_pin (103)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_19_pwm_pin (104) function: pinmux_P8_19_pwm_pin (104)
+device: ocp:P8_26_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_26_default_pin (105) function: pinmux_P8_26_default_pin (105)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_26_gpio_pin (106) function: pinmux_P8_26_gpio_pin (106)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_26_gpio_pu_pin (107) function: pinmux_P8_26_gpio_pu_pin (107)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_26_gpio_pd_pin (108) function: pinmux_P8_26_gpio_pd_pin (108)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P8_26_gpio_input_pin (109) function: pinmux_P8_26_gpio_input_pin (109)
+device: ocp:P9_11_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_11_default_pin (110) function: pinmux_P9_11_default_pin (110)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_11_gpio_pin (111) function: pinmux_P9_11_gpio_pin (111)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_11_gpio_pu_pin (112) function: pinmux_P9_11_gpio_pu_pin (112)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_11_gpio_pd_pin (113) function: pinmux_P9_11_gpio_pd_pin (113)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_11_gpio_input_pin (114) function: pinmux_P9_11_gpio_input_pin (114)
+  state: uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_11_uart_pin (115) function: pinmux_P9_11_uart_pin (115)
+device: ocp:P9_12_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_12_default_pin (116) function: pinmux_P9_12_default_pin (116)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_12_gpio_pin (117) function: pinmux_P9_12_gpio_pin (117)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_12_gpio_pu_pin (118) function: pinmux_P9_12_gpio_pu_pin (118)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_12_gpio_pd_pin (119) function: pinmux_P9_12_gpio_pd_pin (119)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_12_gpio_input_pin (120) function: pinmux_P9_12_gpio_input_pin (120)
+device: ocp:P9_13_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_13_default_pin (121) function: pinmux_P9_13_default_pin (121)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_13_gpio_pin (122) function: pinmux_P9_13_gpio_pin (122)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_13_gpio_pu_pin (123) function: pinmux_P9_13_gpio_pu_pin (123)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_13_gpio_pd_pin (124) function: pinmux_P9_13_gpio_pd_pin (124)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_13_gpio_input_pin (125) function: pinmux_P9_13_gpio_input_pin (125)
+  state: uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_13_uart_pin (126) function: pinmux_P9_13_uart_pin (126)
+device: ocp:P9_14_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_14_default_pin (127) function: pinmux_P9_14_default_pin (127)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_14_gpio_pin (128) function: pinmux_P9_14_gpio_pin (128)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_14_gpio_pu_pin (129) function: pinmux_P9_14_gpio_pu_pin (129)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_14_gpio_pd_pin (130) function: pinmux_P9_14_gpio_pd_pin (130)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_14_gpio_input_pin (131) function: pinmux_P9_14_gpio_input_pin (131)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_14_pwm_pin (132) function: pinmux_P9_14_pwm_pin (132)
+device: ocp:P9_15_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_15_default_pin (133) function: pinmux_P9_15_default_pin (133)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_15_gpio_pin (134) function: pinmux_P9_15_gpio_pin (134)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_15_gpio_pu_pin (135) function: pinmux_P9_15_gpio_pu_pin (135)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_15_gpio_pd_pin (136) function: pinmux_P9_15_gpio_pd_pin (136)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_15_gpio_input_pin (137) function: pinmux_P9_15_gpio_input_pin (137)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_15_pwm_pin (138) function: pinmux_P9_15_pwm_pin (138)
+device: ocp:P9_16_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_16_default_pin (139) function: pinmux_P9_16_default_pin (139)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_16_gpio_pin (140) function: pinmux_P9_16_gpio_pin (140)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_16_gpio_pu_pin (141) function: pinmux_P9_16_gpio_pu_pin (141)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_16_gpio_pd_pin (142) function: pinmux_P9_16_gpio_pd_pin (142)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_16_gpio_input_pin (143) function: pinmux_P9_16_gpio_input_pin (143)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_16_pwm_pin (144) function: pinmux_P9_16_pwm_pin (144)
+device: ocp:P9_17_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_17_default_pin (145) function: pinmux_P9_17_default_pin (145)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_17_gpio_pin (146) function: pinmux_P9_17_gpio_pin (146)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_17_gpio_pu_pin (147) function: pinmux_P9_17_gpio_pu_pin (147)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_17_gpio_pd_pin (148) function: pinmux_P9_17_gpio_pd_pin (148)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_17_gpio_input_pin (149) function: pinmux_P9_17_gpio_input_pin (149)
+  state: spi_cs
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_17_spi_cs_pin (150) function: pinmux_P9_17_spi_cs_pin (150)
+  state: i2c
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_17_i2c_pin (151) function: pinmux_P9_17_i2c_pin (151)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_17_pwm_pin (152) function: pinmux_P9_17_pwm_pin (152)
+  state: pru_uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_17_pru_uart_pin (153) function: pinmux_P9_17_pru_uart_pin (153)
+device: ocp:P9_18_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_18_default_pin (154) function: pinmux_P9_18_default_pin (154)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_18_gpio_pin (155) function: pinmux_P9_18_gpio_pin (155)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_18_gpio_pu_pin (156) function: pinmux_P9_18_gpio_pu_pin (156)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_18_gpio_pd_pin (157) function: pinmux_P9_18_gpio_pd_pin (157)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_18_gpio_input_pin (158) function: pinmux_P9_18_gpio_input_pin (158)
+  state: spi
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_18_spi_pin (159) function: pinmux_P9_18_spi_pin (159)
+  state: i2c
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_18_i2c_pin (160) function: pinmux_P9_18_i2c_pin (160)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_18_pwm_pin (161) function: pinmux_P9_18_pwm_pin (161)
+  state: pru_uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_18_pru_uart_pin (162) function: pinmux_P9_18_pru_uart_pin (162)
+device: ocp:P9_21_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_21_default_pin (163) function: pinmux_P9_21_default_pin (163)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_21_gpio_pin (164) function: pinmux_P9_21_gpio_pin (164)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_21_gpio_pu_pin (165) function: pinmux_P9_21_gpio_pu_pin (165)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_21_gpio_pd_pin (166) function: pinmux_P9_21_gpio_pd_pin (166)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_21_gpio_input_pin (167) function: pinmux_P9_21_gpio_input_pin (167)
+  state: spi
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_21_spi_pin (168) function: pinmux_P9_21_spi_pin (168)
+  state: uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_21_uart_pin (169) function: pinmux_P9_21_uart_pin (169)
+  state: i2c
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_21_i2c_pin (170) function: pinmux_P9_21_i2c_pin (170)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_21_pwm_pin (171) function: pinmux_P9_21_pwm_pin (171)
+  state: pru_uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_21_pru_uart_pin (172) function: pinmux_P9_21_pru_uart_pin (172)
+device: ocp:P9_22_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_22_default_pin (173) function: pinmux_P9_22_default_pin (173)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_22_gpio_pin (174) function: pinmux_P9_22_gpio_pin (174)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_22_gpio_pu_pin (175) function: pinmux_P9_22_gpio_pu_pin (175)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_22_gpio_pd_pin (176) function: pinmux_P9_22_gpio_pd_pin (176)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_22_gpio_input_pin (177) function: pinmux_P9_22_gpio_input_pin (177)
+  state: spi_sclk
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_22_spi_sclk_pin (178) function: pinmux_P9_22_spi_sclk_pin (178)
+  state: uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_22_uart_pin (179) function: pinmux_P9_22_uart_pin (179)
+  state: i2c
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_22_i2c_pin (180) function: pinmux_P9_22_i2c_pin (180)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_22_pwm_pin (181) function: pinmux_P9_22_pwm_pin (181)
+  state: pru_uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_22_pru_uart_pin (182) function: pinmux_P9_22_pru_uart_pin (182)
+device: ocp:P9_23_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_23_default_pin (183) function: pinmux_P9_23_default_pin (183)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_23_gpio_pin (184) function: pinmux_P9_23_gpio_pin (184)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_23_gpio_pu_pin (185) function: pinmux_P9_23_gpio_pu_pin (185)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_23_gpio_pd_pin (186) function: pinmux_P9_23_gpio_pd_pin (186)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_23_gpio_input_pin (187) function: pinmux_P9_23_gpio_input_pin (187)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_23_pwm_pin (188) function: pinmux_P9_23_pwm_pin (188)
+device: ocp:P9_24_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_24_default_pin (189) function: pinmux_P9_24_default_pin (189)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_24_gpio_pin (190) function: pinmux_P9_24_gpio_pin (190)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_24_gpio_pu_pin (191) function: pinmux_P9_24_gpio_pu_pin (191)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_24_gpio_pd_pin (192) function: pinmux_P9_24_gpio_pd_pin (192)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_24_gpio_input_pin (193) function: pinmux_P9_24_gpio_input_pin (193)
+  state: uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_24_uart_pin (194) function: pinmux_P9_24_uart_pin (194)
+  state: can
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_24_can_pin (195) function: pinmux_P9_24_can_pin (195)
+  state: i2c
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_24_i2c_pin (196) function: pinmux_P9_24_i2c_pin (196)
+  state: pru_uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_24_pru_uart_pin (197) function: pinmux_P9_24_pru_uart_pin (197)
+  state: pruin
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_24_pruin_pin (198) function: pinmux_P9_24_pruin_pin (198)
+device: ocp:P9_26_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_26_default_pin (199) function: pinmux_P9_26_default_pin (199)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_26_gpio_pin (200) function: pinmux_P9_26_gpio_pin (200)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_26_gpio_pu_pin (201) function: pinmux_P9_26_gpio_pu_pin (201)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_26_gpio_pd_pin (202) function: pinmux_P9_26_gpio_pd_pin (202)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_26_gpio_input_pin (203) function: pinmux_P9_26_gpio_input_pin (203)
+  state: uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_26_uart_pin (204) function: pinmux_P9_26_uart_pin (204)
+  state: can
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_26_can_pin (205) function: pinmux_P9_26_can_pin (205)
+  state: i2c
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_26_i2c_pin (206) function: pinmux_P9_26_i2c_pin (206)
+  state: pru_uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_26_pru_uart_pin (207) function: pinmux_P9_26_pru_uart_pin (207)
+  state: pruin
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_26_pruin_pin (208) function: pinmux_P9_26_pruin_pin (208)
+device: ocp:P9_27_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_27_default_pin (209) function: pinmux_P9_27_default_pin (209)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_27_gpio_pin (210) function: pinmux_P9_27_gpio_pin (210)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_27_gpio_pu_pin (211) function: pinmux_P9_27_gpio_pu_pin (211)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_27_gpio_pd_pin (212) function: pinmux_P9_27_gpio_pd_pin (212)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_27_gpio_input_pin (213) function: pinmux_P9_27_gpio_input_pin (213)
+  state: qep
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_27_qep_pin (214) function: pinmux_P9_27_qep_pin (214)
+  state: pruout
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_27_pruout_pin (215) function: pinmux_P9_27_pruout_pin (215)
+  state: pruin
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_27_pruin_pin (216) function: pinmux_P9_27_pruin_pin (216)
+device: ocp:P9_30_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_30_default_pin (217) function: pinmux_P9_30_default_pin (217)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_30_gpio_pin (218) function: pinmux_P9_30_gpio_pin (218)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_30_gpio_pu_pin (219) function: pinmux_P9_30_gpio_pu_pin (219)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_30_gpio_pd_pin (220) function: pinmux_P9_30_gpio_pd_pin (220)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_30_gpio_input_pin (221) function: pinmux_P9_30_gpio_input_pin (221)
+  state: spi
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_30_spi_pin (222) function: pinmux_P9_30_spi_pin (222)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_30_pwm_pin (223) function: pinmux_P9_30_pwm_pin (223)
+  state: pruout
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_30_pruout_pin (224) function: pinmux_P9_30_pruout_pin (224)
+  state: pruin
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_30_pruin_pin (225) function: pinmux_P9_30_pruin_pin (225)
+device: ocp:P9_41_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_41_default_pin (226) function: pinmux_P9_41_default_pin (226)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_41_gpio_pin (227) function: pinmux_P9_41_gpio_pin (227)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_41_gpio_pu_pin (228) function: pinmux_P9_41_gpio_pu_pin (228)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_41_gpio_pd_pin (229) function: pinmux_P9_41_gpio_pd_pin (229)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_41_gpio_input_pin (230) function: pinmux_P9_41_gpio_input_pin (230)
+  state: timer
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_41_timer_pin (231) function: pinmux_P9_41_timer_pin (231)
+  state: pruin
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_41_pruin_pin (232) function: pinmux_P9_41_pruin_pin (232)
+device: ocp:P9_91_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_91_default_pin (233) function: pinmux_P9_91_default_pin (233)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_91_gpio_pin (234) function: pinmux_P9_91_gpio_pin (234)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_91_gpio_pu_pin (235) function: pinmux_P9_91_gpio_pu_pin (235)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_91_gpio_pd_pin (236) function: pinmux_P9_91_gpio_pd_pin (236)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_91_gpio_input_pin (237) function: pinmux_P9_91_gpio_input_pin (237)
+  state: qep
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_91_qep_pin (238) function: pinmux_P9_91_qep_pin (238)
+  state: pruout
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_91_pruout_pin (239) function: pinmux_P9_91_pruout_pin (239)
+  state: pruin
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_91_pruin_pin (240) function: pinmux_P9_91_pruin_pin (240)
+device: ocp:P9_42_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_42_default_pin (241) function: pinmux_P9_42_default_pin (241)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_42_gpio_pin (242) function: pinmux_P9_42_gpio_pin (242)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_42_gpio_pu_pin (243) function: pinmux_P9_42_gpio_pu_pin (243)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_42_gpio_pd_pin (244) function: pinmux_P9_42_gpio_pd_pin (244)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_42_gpio_input_pin (245) function: pinmux_P9_42_gpio_input_pin (245)
+  state: spi_cs
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_42_spi_cs_pin (246) function: pinmux_P9_42_spi_cs_pin (246)
+  state: spi_sclk
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_42_spi_sclk_pin (247) function: pinmux_P9_42_spi_sclk_pin (247)
+  state: uart
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_42_uart_pin (248) function: pinmux_P9_42_uart_pin (248)
+  state: pwm
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_42_pwm_pin (249) function: pinmux_P9_42_pwm_pin (249)
+  state: pru_ecap
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_42_pru_ecap_pin (250) function: pinmux_P9_42_pru_ecap_pin (250)
+device: ocp:P9_92_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_92_default_pin (251) function: pinmux_P9_92_default_pin (251)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_92_gpio_pin (252) function: pinmux_P9_92_gpio_pin (252)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_92_gpio_pu_pin (253) function: pinmux_P9_92_gpio_pu_pin (253)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_92_gpio_pd_pin (254) function: pinmux_P9_92_gpio_pd_pin (254)
+  state: gpio_input
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_92_gpio_input_pin (255) function: pinmux_P9_92_gpio_input_pin (255)
+  state: qep
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_92_qep_pin (256) function: pinmux_P9_92_qep_pin (256)
+  state: pruout
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_92_pruout_pin (257) function: pinmux_P9_92_pruout_pin (257)
+  state: pruin
+    type: MUX_GROUP controller pinctrl-single group: pinmux_P9_92_pruin_pin (258) function: pinmux_P9_92_pruin_pin (258)
+device: ocp:A15_pinmux current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_A15_default_pin (259) function: pinmux_A15_default_pin (259)
+  state: clkout
+    type: MUX_GROUP controller pinctrl-single group: pinmux_A15_clkout_pin (260) function: pinmux_A15_clkout_pin (260)
+  state: gpio
+    type: MUX_GROUP controller pinctrl-single group: pinmux_A15_gpio_pin (261) function: pinmux_A15_gpio_pin (261)
+  state: gpio_pu
+    type: MUX_GROUP controller pinctrl-single group: pinmux_A15_gpio_pu_pin (262) function: pinmux_A15_gpio_pu_pin (262)
+  state: gpio_pd
+    type: MUX_GROUP controller pinctrl-single group: pinmux_A15_gpio_pd_pin (263) function: pinmux_A15_gpio_pd_pin (263)
+device: 48030000.spi current state: default
+  state: default
+device: 481a0000.spi current state: default
+  state: default
+device: 481cc000.can current state: default
+  state: default
+device: 481d0000.can current state: default
+  state: default
+device: 4a100000.ethernet current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: cpsw_default (264) function: cpsw_default (264)
+  state: sleep
+    type: MUX_GROUP controller pinctrl-single group: cpsw_sleep (265) function: cpsw_sleep (265)
+device: 4a101000.mdio current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: davinci_mdio_default (266) function: davinci_mdio_default (266)
+  state: sleep
+    type: MUX_GROUP controller pinctrl-single group: davinci_mdio_sleep (267) function: davinci_mdio_sleep (267)
+device: leds current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: user_leds_s0 (268) function: user_leds_s0 (268)
+device: 48038000.mcasp current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: mcasp0_pins (269) function: mcasp0_pins (269)
+device: 44e0b000.i2c current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: pinmux_i2c0_pins (270) function: pinmux_i2c0_pins (270)
+device: 0-0070 current state: default
+  state: default
+    type: MUX_GROUP controller pinctrl-single group: nxp_hdmi_bonelt_pins (271) function: nxp_hdmi_bonelt_pins (271)

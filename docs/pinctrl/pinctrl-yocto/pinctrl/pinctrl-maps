@@ -1,0 +1,92 @@
+Pinctrl maps:
+device 44e10800.pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group clkout2-pins
+function clkout2-pins
+
+device 4819c000.i2c
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group i2c2-pins
+function i2c2-pins
+
+device 4a100000.switch
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group cpsw-default-pins
+function cpsw-default-pins
+
+device 4a100000.switch
+state sleep
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group cpsw-sleep-pins
+function cpsw-sleep-pins
+
+device 4a101000.mdio
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group davinci-mdio-default-pins
+function davinci-mdio-default-pins
+
+device 4a101000.mdio
+state sleep
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group davinci-mdio-sleep-pins
+function davinci-mdio-sleep-pins
+
+device leds
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group user-leds-s0-pins
+function user-leds-s0-pins
+
+device 44e09000.serial
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group uart0-pins
+function uart0-pins
+
+device 44e0b000.i2c
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group i2c0-pins
+function i2c0-pins
+
+device 48060000.mmc
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group mmc1-pins
+function mmc1-pins
+
+device 481d8000.mmc
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group emmc-pins
+function emmc-pins
+
+device 0-0070
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group nxp-hdmi-bonelt-pins
+function nxp-hdmi-bonelt-pins
+
+device 0-0070
+state off
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group nxp-hdmi-bonelt-off-pins
+function nxp-hdmi-bonelt-off-pins
+

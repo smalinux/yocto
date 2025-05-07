@@ -1,0 +1,1989 @@
+Pinctrl maps:
+device 4802a000.i2c
+state default
+type DUMMY_STATE (1)
+
+device 4819c000.i2c
+state default
+type DUMMY_STATE (1)
+
+device ocp:cape-universal
+state default
+type DUMMY_STATE (1)
+
+device 48300100.ecap
+state default
+type DUMMY_STATE (1)
+
+device 48300200.pwm
+state default
+type DUMMY_STATE (1)
+
+device 48302100.ecap
+state default
+type DUMMY_STATE (1)
+
+device 48302200.pwm
+state default
+type DUMMY_STATE (1)
+
+device 48304100.ecap
+state default
+type DUMMY_STATE (1)
+
+device 48304200.pwm
+state default
+type DUMMY_STATE (1)
+
+device 44e09000.serial
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_uart0_pins
+function pinmux_uart0_pins
+
+device 48022000.serial
+state default
+type DUMMY_STATE (1)
+
+device 48024000.serial
+state default
+type DUMMY_STATE (1)
+
+device 481a6000.serial
+state default
+type DUMMY_STATE (1)
+
+device 481a8000.serial
+state default
+type DUMMY_STATE (1)
+
+device 481aa000.serial
+state default
+type DUMMY_STATE (1)
+
+device 48060000.mmc
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_mmc1_pins
+function pinmux_mmc1_pins
+
+device 481d8000.mmc
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_emmc_pins
+function pinmux_emmc_pins
+
+device 48300180.eqep
+state default
+type DUMMY_STATE (1)
+
+device 48302180.eqep
+state default
+type DUMMY_STATE (1)
+
+device 48304180.eqep
+state default
+type DUMMY_STATE (1)
+
+device ocp:P9_19_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_19_default_pin
+function pinmux_P9_19_default_pin
+
+device ocp:P9_19_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_19_gpio_pin
+function pinmux_P9_19_gpio_pin
+
+device ocp:P9_19_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_19_gpio_pu_pin
+function pinmux_P9_19_gpio_pu_pin
+
+device ocp:P9_19_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_19_gpio_pd_pin
+function pinmux_P9_19_gpio_pd_pin
+
+device ocp:P9_19_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_19_gpio_input_pin
+function pinmux_P9_19_gpio_input_pin
+
+device ocp:P9_19_pinmux
+state spi_cs
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_19_spi_cs_pin
+function pinmux_P9_19_spi_cs_pin
+
+device ocp:P9_19_pinmux
+state can
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_19_can_pin
+function pinmux_P9_19_can_pin
+
+device ocp:P9_19_pinmux
+state i2c
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_19_i2c_pin
+function pinmux_P9_19_i2c_pin
+
+device ocp:P9_19_pinmux
+state pru_uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_19_pru_uart_pin
+function pinmux_P9_19_pru_uart_pin
+
+device ocp:P9_19_pinmux
+state timer
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_19_timer_pin
+function pinmux_P9_19_timer_pin
+
+device ocp:P9_20_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_20_default_pin
+function pinmux_P9_20_default_pin
+
+device ocp:P9_20_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_20_gpio_pin
+function pinmux_P9_20_gpio_pin
+
+device ocp:P9_20_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_20_gpio_pu_pin
+function pinmux_P9_20_gpio_pu_pin
+
+device ocp:P9_20_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_20_gpio_pd_pin
+function pinmux_P9_20_gpio_pd_pin
+
+device ocp:P9_20_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_20_gpio_input_pin
+function pinmux_P9_20_gpio_input_pin
+
+device ocp:P9_20_pinmux
+state spi_cs
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_20_spi_cs_pin
+function pinmux_P9_20_spi_cs_pin
+
+device ocp:P9_20_pinmux
+state can
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_20_can_pin
+function pinmux_P9_20_can_pin
+
+device ocp:P9_20_pinmux
+state i2c
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_20_i2c_pin
+function pinmux_P9_20_i2c_pin
+
+device ocp:P9_20_pinmux
+state pru_uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_20_pru_uart_pin
+function pinmux_P9_20_pru_uart_pin
+
+device ocp:P9_20_pinmux
+state timer
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_20_timer_pin
+function pinmux_P9_20_timer_pin
+
+device ocp:P8_07_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_07_default_pin
+function pinmux_P8_07_default_pin
+
+device ocp:P8_07_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_07_gpio_pin
+function pinmux_P8_07_gpio_pin
+
+device ocp:P8_07_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_07_gpio_pu_pin
+function pinmux_P8_07_gpio_pu_pin
+
+device ocp:P8_07_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_07_gpio_pd_pin
+function pinmux_P8_07_gpio_pd_pin
+
+device ocp:P8_07_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_07_gpio_input_pin
+function pinmux_P8_07_gpio_input_pin
+
+device ocp:P8_07_pinmux
+state timer
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_07_timer_pin
+function pinmux_P8_07_timer_pin
+
+device ocp:P8_08_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_08_default_pin
+function pinmux_P8_08_default_pin
+
+device ocp:P8_08_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_08_gpio_pin
+function pinmux_P8_08_gpio_pin
+
+device ocp:P8_08_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_08_gpio_pu_pin
+function pinmux_P8_08_gpio_pu_pin
+
+device ocp:P8_08_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_08_gpio_pd_pin
+function pinmux_P8_08_gpio_pd_pin
+
+device ocp:P8_08_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_08_gpio_input_pin
+function pinmux_P8_08_gpio_input_pin
+
+device ocp:P8_08_pinmux
+state timer
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_08_timer_pin
+function pinmux_P8_08_timer_pin
+
+device ocp:P8_09_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_09_default_pin
+function pinmux_P8_09_default_pin
+
+device ocp:P8_09_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_09_gpio_pin
+function pinmux_P8_09_gpio_pin
+
+device ocp:P8_09_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_09_gpio_pu_pin
+function pinmux_P8_09_gpio_pu_pin
+
+device ocp:P8_09_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_09_gpio_pd_pin
+function pinmux_P8_09_gpio_pd_pin
+
+device ocp:P8_09_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_09_gpio_input_pin
+function pinmux_P8_09_gpio_input_pin
+
+device ocp:P8_09_pinmux
+state timer
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_09_timer_pin
+function pinmux_P8_09_timer_pin
+
+device ocp:P8_10_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_10_default_pin
+function pinmux_P8_10_default_pin
+
+device ocp:P8_10_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_10_gpio_pin
+function pinmux_P8_10_gpio_pin
+
+device ocp:P8_10_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_10_gpio_pu_pin
+function pinmux_P8_10_gpio_pu_pin
+
+device ocp:P8_10_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_10_gpio_pd_pin
+function pinmux_P8_10_gpio_pd_pin
+
+device ocp:P8_10_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_10_gpio_input_pin
+function pinmux_P8_10_gpio_input_pin
+
+device ocp:P8_10_pinmux
+state timer
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_10_timer_pin
+function pinmux_P8_10_timer_pin
+
+device ocp:P8_11_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_11_default_pin
+function pinmux_P8_11_default_pin
+
+device ocp:P8_11_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_11_gpio_pin
+function pinmux_P8_11_gpio_pin
+
+device ocp:P8_11_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_11_gpio_pu_pin
+function pinmux_P8_11_gpio_pu_pin
+
+device ocp:P8_11_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_11_gpio_pd_pin
+function pinmux_P8_11_gpio_pd_pin
+
+device ocp:P8_11_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_11_gpio_input_pin
+function pinmux_P8_11_gpio_input_pin
+
+device ocp:P8_11_pinmux
+state qep
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_11_qep_pin
+function pinmux_P8_11_qep_pin
+
+device ocp:P8_11_pinmux
+state pruout
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_11_pruout_pin
+function pinmux_P8_11_pruout_pin
+
+device ocp:P8_12_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_12_default_pin
+function pinmux_P8_12_default_pin
+
+device ocp:P8_12_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_12_gpio_pin
+function pinmux_P8_12_gpio_pin
+
+device ocp:P8_12_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_12_gpio_pu_pin
+function pinmux_P8_12_gpio_pu_pin
+
+device ocp:P8_12_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_12_gpio_pd_pin
+function pinmux_P8_12_gpio_pd_pin
+
+device ocp:P8_12_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_12_gpio_input_pin
+function pinmux_P8_12_gpio_input_pin
+
+device ocp:P8_12_pinmux
+state qep
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_12_qep_pin
+function pinmux_P8_12_qep_pin
+
+device ocp:P8_12_pinmux
+state pruout
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_12_pruout_pin
+function pinmux_P8_12_pruout_pin
+
+device ocp:P8_13_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_13_default_pin
+function pinmux_P8_13_default_pin
+
+device ocp:P8_13_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_13_gpio_pin
+function pinmux_P8_13_gpio_pin
+
+device ocp:P8_13_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_13_gpio_pu_pin
+function pinmux_P8_13_gpio_pu_pin
+
+device ocp:P8_13_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_13_gpio_pd_pin
+function pinmux_P8_13_gpio_pd_pin
+
+device ocp:P8_13_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_13_gpio_input_pin
+function pinmux_P8_13_gpio_input_pin
+
+device ocp:P8_13_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_13_pwm_pin
+function pinmux_P8_13_pwm_pin
+
+device ocp:P8_14_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_14_default_pin
+function pinmux_P8_14_default_pin
+
+device ocp:P8_14_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_14_gpio_pin
+function pinmux_P8_14_gpio_pin
+
+device ocp:P8_14_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_14_gpio_pu_pin
+function pinmux_P8_14_gpio_pu_pin
+
+device ocp:P8_14_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_14_gpio_pd_pin
+function pinmux_P8_14_gpio_pd_pin
+
+device ocp:P8_14_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_14_gpio_input_pin
+function pinmux_P8_14_gpio_input_pin
+
+device ocp:P8_14_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_14_pwm_pin
+function pinmux_P8_14_pwm_pin
+
+device ocp:P8_15_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_15_default_pin
+function pinmux_P8_15_default_pin
+
+device ocp:P8_15_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_15_gpio_pin
+function pinmux_P8_15_gpio_pin
+
+device ocp:P8_15_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_15_gpio_pu_pin
+function pinmux_P8_15_gpio_pu_pin
+
+device ocp:P8_15_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_15_gpio_pd_pin
+function pinmux_P8_15_gpio_pd_pin
+
+device ocp:P8_15_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_15_gpio_input_pin
+function pinmux_P8_15_gpio_input_pin
+
+device ocp:P8_15_pinmux
+state qep
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_15_qep_pin
+function pinmux_P8_15_qep_pin
+
+device ocp:P8_15_pinmux
+state pru_ecap
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_15_pru_ecap_pin
+function pinmux_P8_15_pru_ecap_pin
+
+device ocp:P8_15_pinmux
+state pruin
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_15_pruin_pin
+function pinmux_P8_15_pruin_pin
+
+device ocp:P8_16_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_16_default_pin
+function pinmux_P8_16_default_pin
+
+device ocp:P8_16_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_16_gpio_pin
+function pinmux_P8_16_gpio_pin
+
+device ocp:P8_16_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_16_gpio_pu_pin
+function pinmux_P8_16_gpio_pu_pin
+
+device ocp:P8_16_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_16_gpio_pd_pin
+function pinmux_P8_16_gpio_pd_pin
+
+device ocp:P8_16_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_16_gpio_input_pin
+function pinmux_P8_16_gpio_input_pin
+
+device ocp:P8_16_pinmux
+state qep
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_16_qep_pin
+function pinmux_P8_16_qep_pin
+
+device ocp:P8_16_pinmux
+state pruin
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_16_pruin_pin
+function pinmux_P8_16_pruin_pin
+
+device ocp:P8_17_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_17_default_pin
+function pinmux_P8_17_default_pin
+
+device ocp:P8_17_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_17_gpio_pin
+function pinmux_P8_17_gpio_pin
+
+device ocp:P8_17_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_17_gpio_pu_pin
+function pinmux_P8_17_gpio_pu_pin
+
+device ocp:P8_17_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_17_gpio_pd_pin
+function pinmux_P8_17_gpio_pd_pin
+
+device ocp:P8_17_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_17_gpio_input_pin
+function pinmux_P8_17_gpio_input_pin
+
+device ocp:P8_17_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_17_pwm_pin
+function pinmux_P8_17_pwm_pin
+
+device ocp:P8_18_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_18_default_pin
+function pinmux_P8_18_default_pin
+
+device ocp:P8_18_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_18_gpio_pin
+function pinmux_P8_18_gpio_pin
+
+device ocp:P8_18_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_18_gpio_pu_pin
+function pinmux_P8_18_gpio_pu_pin
+
+device ocp:P8_18_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_18_gpio_pd_pin
+function pinmux_P8_18_gpio_pd_pin
+
+device ocp:P8_18_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_18_gpio_input_pin
+function pinmux_P8_18_gpio_input_pin
+
+device ocp:P8_19_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_19_default_pin
+function pinmux_P8_19_default_pin
+
+device ocp:P8_19_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_19_gpio_pin
+function pinmux_P8_19_gpio_pin
+
+device ocp:P8_19_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_19_gpio_pu_pin
+function pinmux_P8_19_gpio_pu_pin
+
+device ocp:P8_19_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_19_gpio_pd_pin
+function pinmux_P8_19_gpio_pd_pin
+
+device ocp:P8_19_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_19_gpio_input_pin
+function pinmux_P8_19_gpio_input_pin
+
+device ocp:P8_19_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_19_pwm_pin
+function pinmux_P8_19_pwm_pin
+
+device ocp:P8_26_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_26_default_pin
+function pinmux_P8_26_default_pin
+
+device ocp:P8_26_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_26_gpio_pin
+function pinmux_P8_26_gpio_pin
+
+device ocp:P8_26_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_26_gpio_pu_pin
+function pinmux_P8_26_gpio_pu_pin
+
+device ocp:P8_26_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_26_gpio_pd_pin
+function pinmux_P8_26_gpio_pd_pin
+
+device ocp:P8_26_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P8_26_gpio_input_pin
+function pinmux_P8_26_gpio_input_pin
+
+device ocp:P9_11_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_11_default_pin
+function pinmux_P9_11_default_pin
+
+device ocp:P9_11_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_11_gpio_pin
+function pinmux_P9_11_gpio_pin
+
+device ocp:P9_11_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_11_gpio_pu_pin
+function pinmux_P9_11_gpio_pu_pin
+
+device ocp:P9_11_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_11_gpio_pd_pin
+function pinmux_P9_11_gpio_pd_pin
+
+device ocp:P9_11_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_11_gpio_input_pin
+function pinmux_P9_11_gpio_input_pin
+
+device ocp:P9_11_pinmux
+state uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_11_uart_pin
+function pinmux_P9_11_uart_pin
+
+device ocp:P9_12_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_12_default_pin
+function pinmux_P9_12_default_pin
+
+device ocp:P9_12_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_12_gpio_pin
+function pinmux_P9_12_gpio_pin
+
+device ocp:P9_12_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_12_gpio_pu_pin
+function pinmux_P9_12_gpio_pu_pin
+
+device ocp:P9_12_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_12_gpio_pd_pin
+function pinmux_P9_12_gpio_pd_pin
+
+device ocp:P9_12_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_12_gpio_input_pin
+function pinmux_P9_12_gpio_input_pin
+
+device ocp:P9_13_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_13_default_pin
+function pinmux_P9_13_default_pin
+
+device ocp:P9_13_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_13_gpio_pin
+function pinmux_P9_13_gpio_pin
+
+device ocp:P9_13_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_13_gpio_pu_pin
+function pinmux_P9_13_gpio_pu_pin
+
+device ocp:P9_13_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_13_gpio_pd_pin
+function pinmux_P9_13_gpio_pd_pin
+
+device ocp:P9_13_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_13_gpio_input_pin
+function pinmux_P9_13_gpio_input_pin
+
+device ocp:P9_13_pinmux
+state uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_13_uart_pin
+function pinmux_P9_13_uart_pin
+
+device ocp:P9_14_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_14_default_pin
+function pinmux_P9_14_default_pin
+
+device ocp:P9_14_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_14_gpio_pin
+function pinmux_P9_14_gpio_pin
+
+device ocp:P9_14_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_14_gpio_pu_pin
+function pinmux_P9_14_gpio_pu_pin
+
+device ocp:P9_14_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_14_gpio_pd_pin
+function pinmux_P9_14_gpio_pd_pin
+
+device ocp:P9_14_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_14_gpio_input_pin
+function pinmux_P9_14_gpio_input_pin
+
+device ocp:P9_14_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_14_pwm_pin
+function pinmux_P9_14_pwm_pin
+
+device ocp:P9_15_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_15_default_pin
+function pinmux_P9_15_default_pin
+
+device ocp:P9_15_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_15_gpio_pin
+function pinmux_P9_15_gpio_pin
+
+device ocp:P9_15_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_15_gpio_pu_pin
+function pinmux_P9_15_gpio_pu_pin
+
+device ocp:P9_15_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_15_gpio_pd_pin
+function pinmux_P9_15_gpio_pd_pin
+
+device ocp:P9_15_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_15_gpio_input_pin
+function pinmux_P9_15_gpio_input_pin
+
+device ocp:P9_15_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_15_pwm_pin
+function pinmux_P9_15_pwm_pin
+
+device ocp:P9_16_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_16_default_pin
+function pinmux_P9_16_default_pin
+
+device ocp:P9_16_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_16_gpio_pin
+function pinmux_P9_16_gpio_pin
+
+device ocp:P9_16_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_16_gpio_pu_pin
+function pinmux_P9_16_gpio_pu_pin
+
+device ocp:P9_16_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_16_gpio_pd_pin
+function pinmux_P9_16_gpio_pd_pin
+
+device ocp:P9_16_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_16_gpio_input_pin
+function pinmux_P9_16_gpio_input_pin
+
+device ocp:P9_16_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_16_pwm_pin
+function pinmux_P9_16_pwm_pin
+
+device ocp:P9_17_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_17_default_pin
+function pinmux_P9_17_default_pin
+
+device ocp:P9_17_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_17_gpio_pin
+function pinmux_P9_17_gpio_pin
+
+device ocp:P9_17_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_17_gpio_pu_pin
+function pinmux_P9_17_gpio_pu_pin
+
+device ocp:P9_17_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_17_gpio_pd_pin
+function pinmux_P9_17_gpio_pd_pin
+
+device ocp:P9_17_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_17_gpio_input_pin
+function pinmux_P9_17_gpio_input_pin
+
+device ocp:P9_17_pinmux
+state spi_cs
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_17_spi_cs_pin
+function pinmux_P9_17_spi_cs_pin
+
+device ocp:P9_17_pinmux
+state i2c
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_17_i2c_pin
+function pinmux_P9_17_i2c_pin
+
+device ocp:P9_17_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_17_pwm_pin
+function pinmux_P9_17_pwm_pin
+
+device ocp:P9_17_pinmux
+state pru_uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_17_pru_uart_pin
+function pinmux_P9_17_pru_uart_pin
+
+device ocp:P9_18_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_18_default_pin
+function pinmux_P9_18_default_pin
+
+device ocp:P9_18_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_18_gpio_pin
+function pinmux_P9_18_gpio_pin
+
+device ocp:P9_18_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_18_gpio_pu_pin
+function pinmux_P9_18_gpio_pu_pin
+
+device ocp:P9_18_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_18_gpio_pd_pin
+function pinmux_P9_18_gpio_pd_pin
+
+device ocp:P9_18_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_18_gpio_input_pin
+function pinmux_P9_18_gpio_input_pin
+
+device ocp:P9_18_pinmux
+state spi
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_18_spi_pin
+function pinmux_P9_18_spi_pin
+
+device ocp:P9_18_pinmux
+state i2c
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_18_i2c_pin
+function pinmux_P9_18_i2c_pin
+
+device ocp:P9_18_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_18_pwm_pin
+function pinmux_P9_18_pwm_pin
+
+device ocp:P9_18_pinmux
+state pru_uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_18_pru_uart_pin
+function pinmux_P9_18_pru_uart_pin
+
+device ocp:P9_21_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_21_default_pin
+function pinmux_P9_21_default_pin
+
+device ocp:P9_21_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_21_gpio_pin
+function pinmux_P9_21_gpio_pin
+
+device ocp:P9_21_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_21_gpio_pu_pin
+function pinmux_P9_21_gpio_pu_pin
+
+device ocp:P9_21_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_21_gpio_pd_pin
+function pinmux_P9_21_gpio_pd_pin
+
+device ocp:P9_21_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_21_gpio_input_pin
+function pinmux_P9_21_gpio_input_pin
+
+device ocp:P9_21_pinmux
+state spi
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_21_spi_pin
+function pinmux_P9_21_spi_pin
+
+device ocp:P9_21_pinmux
+state uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_21_uart_pin
+function pinmux_P9_21_uart_pin
+
+device ocp:P9_21_pinmux
+state i2c
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_21_i2c_pin
+function pinmux_P9_21_i2c_pin
+
+device ocp:P9_21_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_21_pwm_pin
+function pinmux_P9_21_pwm_pin
+
+device ocp:P9_21_pinmux
+state pru_uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_21_pru_uart_pin
+function pinmux_P9_21_pru_uart_pin
+
+device ocp:P9_22_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_22_default_pin
+function pinmux_P9_22_default_pin
+
+device ocp:P9_22_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_22_gpio_pin
+function pinmux_P9_22_gpio_pin
+
+device ocp:P9_22_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_22_gpio_pu_pin
+function pinmux_P9_22_gpio_pu_pin
+
+device ocp:P9_22_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_22_gpio_pd_pin
+function pinmux_P9_22_gpio_pd_pin
+
+device ocp:P9_22_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_22_gpio_input_pin
+function pinmux_P9_22_gpio_input_pin
+
+device ocp:P9_22_pinmux
+state spi_sclk
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_22_spi_sclk_pin
+function pinmux_P9_22_spi_sclk_pin
+
+device ocp:P9_22_pinmux
+state uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_22_uart_pin
+function pinmux_P9_22_uart_pin
+
+device ocp:P9_22_pinmux
+state i2c
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_22_i2c_pin
+function pinmux_P9_22_i2c_pin
+
+device ocp:P9_22_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_22_pwm_pin
+function pinmux_P9_22_pwm_pin
+
+device ocp:P9_22_pinmux
+state pru_uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_22_pru_uart_pin
+function pinmux_P9_22_pru_uart_pin
+
+device ocp:P9_23_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_23_default_pin
+function pinmux_P9_23_default_pin
+
+device ocp:P9_23_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_23_gpio_pin
+function pinmux_P9_23_gpio_pin
+
+device ocp:P9_23_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_23_gpio_pu_pin
+function pinmux_P9_23_gpio_pu_pin
+
+device ocp:P9_23_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_23_gpio_pd_pin
+function pinmux_P9_23_gpio_pd_pin
+
+device ocp:P9_23_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_23_gpio_input_pin
+function pinmux_P9_23_gpio_input_pin
+
+device ocp:P9_23_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_23_pwm_pin
+function pinmux_P9_23_pwm_pin
+
+device ocp:P9_24_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_24_default_pin
+function pinmux_P9_24_default_pin
+
+device ocp:P9_24_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_24_gpio_pin
+function pinmux_P9_24_gpio_pin
+
+device ocp:P9_24_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_24_gpio_pu_pin
+function pinmux_P9_24_gpio_pu_pin
+
+device ocp:P9_24_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_24_gpio_pd_pin
+function pinmux_P9_24_gpio_pd_pin
+
+device ocp:P9_24_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_24_gpio_input_pin
+function pinmux_P9_24_gpio_input_pin
+
+device ocp:P9_24_pinmux
+state uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_24_uart_pin
+function pinmux_P9_24_uart_pin
+
+device ocp:P9_24_pinmux
+state can
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_24_can_pin
+function pinmux_P9_24_can_pin
+
+device ocp:P9_24_pinmux
+state i2c
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_24_i2c_pin
+function pinmux_P9_24_i2c_pin
+
+device ocp:P9_24_pinmux
+state pru_uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_24_pru_uart_pin
+function pinmux_P9_24_pru_uart_pin
+
+device ocp:P9_24_pinmux
+state pruin
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_24_pruin_pin
+function pinmux_P9_24_pruin_pin
+
+device ocp:P9_26_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_26_default_pin
+function pinmux_P9_26_default_pin
+
+device ocp:P9_26_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_26_gpio_pin
+function pinmux_P9_26_gpio_pin
+
+device ocp:P9_26_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_26_gpio_pu_pin
+function pinmux_P9_26_gpio_pu_pin
+
+device ocp:P9_26_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_26_gpio_pd_pin
+function pinmux_P9_26_gpio_pd_pin
+
+device ocp:P9_26_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_26_gpio_input_pin
+function pinmux_P9_26_gpio_input_pin
+
+device ocp:P9_26_pinmux
+state uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_26_uart_pin
+function pinmux_P9_26_uart_pin
+
+device ocp:P9_26_pinmux
+state can
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_26_can_pin
+function pinmux_P9_26_can_pin
+
+device ocp:P9_26_pinmux
+state i2c
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_26_i2c_pin
+function pinmux_P9_26_i2c_pin
+
+device ocp:P9_26_pinmux
+state pru_uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_26_pru_uart_pin
+function pinmux_P9_26_pru_uart_pin
+
+device ocp:P9_26_pinmux
+state pruin
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_26_pruin_pin
+function pinmux_P9_26_pruin_pin
+
+device ocp:P9_27_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_27_default_pin
+function pinmux_P9_27_default_pin
+
+device ocp:P9_27_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_27_gpio_pin
+function pinmux_P9_27_gpio_pin
+
+device ocp:P9_27_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_27_gpio_pu_pin
+function pinmux_P9_27_gpio_pu_pin
+
+device ocp:P9_27_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_27_gpio_pd_pin
+function pinmux_P9_27_gpio_pd_pin
+
+device ocp:P9_27_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_27_gpio_input_pin
+function pinmux_P9_27_gpio_input_pin
+
+device ocp:P9_27_pinmux
+state qep
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_27_qep_pin
+function pinmux_P9_27_qep_pin
+
+device ocp:P9_27_pinmux
+state pruout
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_27_pruout_pin
+function pinmux_P9_27_pruout_pin
+
+device ocp:P9_27_pinmux
+state pruin
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_27_pruin_pin
+function pinmux_P9_27_pruin_pin
+
+device ocp:P9_30_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_30_default_pin
+function pinmux_P9_30_default_pin
+
+device ocp:P9_30_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_30_gpio_pin
+function pinmux_P9_30_gpio_pin
+
+device ocp:P9_30_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_30_gpio_pu_pin
+function pinmux_P9_30_gpio_pu_pin
+
+device ocp:P9_30_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_30_gpio_pd_pin
+function pinmux_P9_30_gpio_pd_pin
+
+device ocp:P9_30_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_30_gpio_input_pin
+function pinmux_P9_30_gpio_input_pin
+
+device ocp:P9_30_pinmux
+state spi
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_30_spi_pin
+function pinmux_P9_30_spi_pin
+
+device ocp:P9_30_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_30_pwm_pin
+function pinmux_P9_30_pwm_pin
+
+device ocp:P9_30_pinmux
+state pruout
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_30_pruout_pin
+function pinmux_P9_30_pruout_pin
+
+device ocp:P9_30_pinmux
+state pruin
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_30_pruin_pin
+function pinmux_P9_30_pruin_pin
+
+device ocp:P9_41_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_41_default_pin
+function pinmux_P9_41_default_pin
+
+device ocp:P9_41_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_41_gpio_pin
+function pinmux_P9_41_gpio_pin
+
+device ocp:P9_41_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_41_gpio_pu_pin
+function pinmux_P9_41_gpio_pu_pin
+
+device ocp:P9_41_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_41_gpio_pd_pin
+function pinmux_P9_41_gpio_pd_pin
+
+device ocp:P9_41_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_41_gpio_input_pin
+function pinmux_P9_41_gpio_input_pin
+
+device ocp:P9_41_pinmux
+state timer
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_41_timer_pin
+function pinmux_P9_41_timer_pin
+
+device ocp:P9_41_pinmux
+state pruin
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_41_pruin_pin
+function pinmux_P9_41_pruin_pin
+
+device ocp:P9_91_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_91_default_pin
+function pinmux_P9_91_default_pin
+
+device ocp:P9_91_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_91_gpio_pin
+function pinmux_P9_91_gpio_pin
+
+device ocp:P9_91_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_91_gpio_pu_pin
+function pinmux_P9_91_gpio_pu_pin
+
+device ocp:P9_91_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_91_gpio_pd_pin
+function pinmux_P9_91_gpio_pd_pin
+
+device ocp:P9_91_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_91_gpio_input_pin
+function pinmux_P9_91_gpio_input_pin
+
+device ocp:P9_91_pinmux
+state qep
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_91_qep_pin
+function pinmux_P9_91_qep_pin
+
+device ocp:P9_91_pinmux
+state pruout
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_91_pruout_pin
+function pinmux_P9_91_pruout_pin
+
+device ocp:P9_91_pinmux
+state pruin
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_91_pruin_pin
+function pinmux_P9_91_pruin_pin
+
+device ocp:P9_42_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_42_default_pin
+function pinmux_P9_42_default_pin
+
+device ocp:P9_42_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_42_gpio_pin
+function pinmux_P9_42_gpio_pin
+
+device ocp:P9_42_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_42_gpio_pu_pin
+function pinmux_P9_42_gpio_pu_pin
+
+device ocp:P9_42_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_42_gpio_pd_pin
+function pinmux_P9_42_gpio_pd_pin
+
+device ocp:P9_42_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_42_gpio_input_pin
+function pinmux_P9_42_gpio_input_pin
+
+device ocp:P9_42_pinmux
+state spi_cs
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_42_spi_cs_pin
+function pinmux_P9_42_spi_cs_pin
+
+device ocp:P9_42_pinmux
+state spi_sclk
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_42_spi_sclk_pin
+function pinmux_P9_42_spi_sclk_pin
+
+device ocp:P9_42_pinmux
+state uart
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_42_uart_pin
+function pinmux_P9_42_uart_pin
+
+device ocp:P9_42_pinmux
+state pwm
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_42_pwm_pin
+function pinmux_P9_42_pwm_pin
+
+device ocp:P9_42_pinmux
+state pru_ecap
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_42_pru_ecap_pin
+function pinmux_P9_42_pru_ecap_pin
+
+device ocp:P9_92_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_92_default_pin
+function pinmux_P9_92_default_pin
+
+device ocp:P9_92_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_92_gpio_pin
+function pinmux_P9_92_gpio_pin
+
+device ocp:P9_92_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_92_gpio_pu_pin
+function pinmux_P9_92_gpio_pu_pin
+
+device ocp:P9_92_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_92_gpio_pd_pin
+function pinmux_P9_92_gpio_pd_pin
+
+device ocp:P9_92_pinmux
+state gpio_input
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_92_gpio_input_pin
+function pinmux_P9_92_gpio_input_pin
+
+device ocp:P9_92_pinmux
+state qep
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_92_qep_pin
+function pinmux_P9_92_qep_pin
+
+device ocp:P9_92_pinmux
+state pruout
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_92_pruout_pin
+function pinmux_P9_92_pruout_pin
+
+device ocp:P9_92_pinmux
+state pruin
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_P9_92_pruin_pin
+function pinmux_P9_92_pruin_pin
+
+device ocp:A15_pinmux
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_A15_default_pin
+function pinmux_A15_default_pin
+
+device ocp:A15_pinmux
+state clkout
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_A15_clkout_pin
+function pinmux_A15_clkout_pin
+
+device ocp:A15_pinmux
+state gpio
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_A15_gpio_pin
+function pinmux_A15_gpio_pin
+
+device ocp:A15_pinmux
+state gpio_pu
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_A15_gpio_pu_pin
+function pinmux_A15_gpio_pu_pin
+
+device ocp:A15_pinmux
+state gpio_pd
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_A15_gpio_pd_pin
+function pinmux_A15_gpio_pd_pin
+
+device 48030000.spi
+state default
+type DUMMY_STATE (1)
+
+device 481a0000.spi
+state default
+type DUMMY_STATE (1)
+
+device 481cc000.can
+state default
+type DUMMY_STATE (1)
+
+device 481d0000.can
+state default
+type DUMMY_STATE (1)
+
+device 4a100000.ethernet
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group cpsw_default
+function cpsw_default
+
+device 4a100000.ethernet
+state sleep
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group cpsw_sleep
+function cpsw_sleep
+
+device 4a101000.mdio
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group davinci_mdio_default
+function davinci_mdio_default
+
+device 4a101000.mdio
+state sleep
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group davinci_mdio_sleep
+function davinci_mdio_sleep
+
+device leds
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group user_leds_s0
+function user_leds_s0
+
+device 48038000.mcasp
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group mcasp0_pins
+function mcasp0_pins
+
+device 44e0b000.i2c
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group pinmux_i2c0_pins
+function pinmux_i2c0_pins
+
+device 0-0070
+state default
+type MUX_GROUP (2)
+controlling device 44e10800.pinmux
+group nxp_hdmi_bonelt_pins
+function nxp_hdmi_bonelt_pins
+

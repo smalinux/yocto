@@ -1,0 +1,3 @@
+name [pinmux] [pinconf]
+pinctrl-single yes no
+44e3e000.rtc no yes
