@@ -32,3 +32,15 @@ SRC_URI = " \
 do_configure:prepend() {
     cp ${WORKDIR}/*.dts ${S}/arch/arm/boot/dts/ti/omap
 }
+
+do_rootfs:append() {
+    install -d ${IMAGE_ROOTFS}/boot
+
+    install -m 0644 ${DEPLOY_DIR_IMAGE}/zImage ${IMAGE_ROOTFS}/boot/zImage
+
+    for dtb in ${KERNEL_DEVICETREE}; do
+        if [ -f ${DEPLOY_DIR_IMAGE}/$dtb ]; then
+            install -m 0644 ${DEPLOY_DIR_IMAGE}/$dtb ${IMAGE_ROOTFS}/boot/
+        fi
+    done
+}

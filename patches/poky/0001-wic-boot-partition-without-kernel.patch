@@ -1,0 +1,28 @@
+From 166edc1cd047b0bbdce29767331f9a48eba529d8 Mon Sep 17 00:00:00 2001
+From: Sohaib Mohamed <sohaib.amhmd@gmail.com>
+Date: Sat, 10 May 2025 11:17:11 +0200
+Subject: [PATCH] wic: boot partition without kernel
+
+Signed-off-by: Sohaib Mohamed <sohaib.amhmd@gmail.com>
+---
+ scripts/lib/wic/plugins/source/bootimg-partition.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/scripts/lib/wic/plugins/source/bootimg-partition.py b/scripts/lib/wic/plugins/source/bootimg-partition.py
+index 1071d1af3f..2e0c74e2ae 100644
+--- a/scripts/lib/wic/plugins/source/bootimg-partition.py
++++ b/scripts/lib/wic/plugins/source/bootimg-partition.py
+@@ -143,8 +143,8 @@ class BootimgPartitionPlugin(SourcePlugin):
+                     fdt_dir = os.path.join(fdt_dir, os.path.dirname(dst))
+                     break
+ 
+-            if not kernel_name:
+-                raise WicError('No kernel file found')
++            #if not kernel_name:
++            #    raise WicError('No kernel file found')
+ 
+             # Compose the extlinux.conf
+             extlinux_conf = "default Yocto\n"
+-- 
+2.43.0
+

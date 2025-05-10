@@ -48,12 +48,12 @@ fi
 
 
 if mmc dev 0; then
-    
+
     if test ! -e mmc 0:1 ${bootdir}/uboot.env; then saveenv; fi;
 
     part uuid ${bootdev} uuid
-    load mmc 0:1 ${loadaddr} ${bootdir}/zImage
-    load mmc 0:1 ${fdtaddr} ${bootdir}/${fdtfile}
+    load ${bootdev} ${loadaddr} /boot/zImage
+    load ${bootdev} ${fdtaddr} /boot/${fdtfile}
     bootz ${loadaddr} - ${fdtaddr}
 else
     echo "Could not find mmc 0"
