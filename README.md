@@ -3,12 +3,17 @@ Build the system image:
 
     # source env.sh
     $ bitbake core-image-bbb
+    # sudo bmaptool bbb/copy core-image-bbb-bbb.rootfs.wic /dev/sda
 
 ## nfsroot
 
 Start the update server:
 
+    ## Default location:
     $ nfs-export-updater --debug core-image-bbb
+    ## Custom location:
+    $ runqemu-extract-sdk images/bbb/core-image-bbb-bbb.rootfs.tar.gz /srv/nfs/bbb
+    $ nfs-export-updater --debug core-image-bbb /srv/nfs/bbb
 
 This will
 
@@ -31,6 +36,7 @@ To build the bundle, run:
 
     $ bitbake core-image-bbb
     $ bitbake update-bundle
+    $ ./raucinstall 192.168.0.99
 
 Copy the generated bundle to the target system via nc, scp or an attached USB stick.
 
@@ -49,6 +55,22 @@ To see that RAUC is configured correctly and can interact with the bootloader,
 run:
 
     # rauc status
+
+
+## Linux Kernel
+
+### dev cycle in yocto
+    $ bitbake virtual/kernel -c menuconfig
+    $ bitbake -e linux-stable | grep ^S=
+    $ cp /mnt/_OUTPUT/tmp/poky-bbb-glibc/work/bbb-poky-linux-gnueabi/linux-stable/6.13.1/build/.config meta-bbb/recipes-kernel/linux/linux-stable-6.13/bbb/defconfig
+    $ bitbake -v linux-stable
+    $ bitbake core-image-bbb
+
+
+
+
+
+### dev cycle out yocto
 
 
 ## Feature List
