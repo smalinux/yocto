@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e -x
+#
+#
+sdcard=$1
+#
+#
+#
+
+bmaptool copy images/bbb/core-image-bbb-bbb.rootfs.wic.xz $sdcard
+
+
+
