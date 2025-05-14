@@ -40,9 +40,13 @@ IMAGE_FEATURES:append =" debug-tweaks"
 #IMAGE_FEATURES:append =" lic-pkgs"
 IMAGE_FEATURES:append =" package-management"
 
+# ext4 block and inode size should be set to 4K
+EXTRA_IMAGECMD:ext4 = "-i 4096 -b 4096"
+
 #
 # IMAGE_INSTALL
 #
+IMAGE_INSTALL:append = " rauc"
 IMAGE_INSTALL:append = " hello"
 IMAGE_INSTALL:append = " kmod"
 IMAGE_INSTALL:append = " python3"
@@ -54,6 +58,10 @@ IMAGE_INSTALL:append = " alsa-plugins alsa-utils alsa-lib alsa-tools alsa-state 
 IMAGE_INSTALL:append = " usbutils"
 #IMAGE_INSTALL:append = " dropbear"
 #IMAGE_INSTALL:append = " bc"
+
+# Optimizations for RAUC adaptive method 'block-hash-index'
+# rootfs image size must to be 4K-aligned
+IMAGE_ROOTFS_ALIGNMENT = "4"
 
 #
 # buildhistory
