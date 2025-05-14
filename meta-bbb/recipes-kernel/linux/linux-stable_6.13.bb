@@ -11,7 +11,6 @@ KERNEL_DEVICETREE ?= " \
     ti/omap/am335x-bonegreen.dtb \
     ti/omap/am335x-bonegreen-wireless.dtb \
     ti/omap/am335x-pocketbeagle.dtb \
-    ti/omap/bbb-gen4-4dcape70t.dtb \
 "
 
 LINUX_VERSION = "6.13"
@@ -25,7 +24,6 @@ SRCREV = "16dc8d5d6fc132f09b3fa6021f94f11c60e39957"
 SRC_URI = " \
     git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;branch=linux-${LINUX_VERSION}.y \
     file://defconfig \
-    file://bbb-gen4-4dcape70t.dts \
     file://am335x-boneblack.dts \
 "
 
