@@ -1,7 +1,9 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
+UBOOT_MACHINE = "am335x_evm_defconfig"
+
 SRC_URI += "  \
-    file://0001-am335x_evm_defconfig-rauc.patch \
+    file://am335x_evm_defconfig \
     file://fw_env.config \
     file://boot.cmd \
 "
@@ -10,6 +12,10 @@ SRC_URI += "  \
 # uboot-mkimage command from poky/meta/recipes-bsp/u-boot/u-boot.inc
 UBOOT_ENV_SUFFIX = "scr"
 UBOOT_ENV = "boot"
+
+do_configure:prepend() {
+    cp ${WORKDIR}/am335x_evm_defconfig ${S}/configs/
+}
 
 do_install:append() {
     install -d ${D}${sysconfdir}
