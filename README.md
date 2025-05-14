@@ -1,11 +1,15 @@
 
-Build the system image:
+## Build the image
 
     # source env.sh
     $ bitbake core-image-bbb
     # sudo bmaptool bbb/copy core-image-bbb-bbb.rootfs.wic /dev/sda
 
-## nfsroot
+## Flash SDCard
+
+    $ sudo ./flash /dev/sda
+
+## nfsroot poky exporter
 
 Start the update server:
 
@@ -27,8 +31,12 @@ To copy files into the nfsroot, use `nfs-cp`, e.g.
 nfs-cp ~/nfsroot/myboard fstab /etc/fstab
 ```
 
+## Boot options:
+
+    Uboot=> run boot_menu
 
 ## Rauc
+    $ nfs-export-updater --debug core-image-bbb
 
 ### Build and Install The Demo Bundle
 
