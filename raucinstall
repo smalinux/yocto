@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e -x
+#
+# Example:
+#   $ ./raucinstall 192.168.0.99
+#
+#
+IP=$1
+#
+#
+#
+#pushd /mnt/_OUTPUT/tmp/poky-bbb-glibc/deploy/images/bbb
+#    ssh-keygen -f '/home/smalinux/.ssh/known_hosts' -R '192.168.0.19'
+#    yes | scp update-bundle-bbb.raucb root@192.168.0.19:/tmp/
+#    ssh root@192.168.0.19 'rauc install /tmp/update-bundle-bbb.raucb; reboot'
+#popd
+#
+
+yes | ssh-keygen -f '/home/smalinux/.ssh/known_hosts' -R $IP
+scp  -o StrictHostKeyChecking=no images/bbb/update-bundle-bbb.raucb root@$IP:/tmp/
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@$IP 'rauc install /tmp/update-bundle-bbb.raucb'
+ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@$IP 'nohup reboot -f >/dev/null 2>&1 &' &
+
+
