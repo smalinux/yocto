@@ -1,6 +1,6 @@
 [submodule "poky"]
 	path = poky
-	url = git://git.yoctoproject.org/poky
+	url = https://github.com/smalinux/poky.git
 [submodule "meta-arm"]
 	path = meta-arm
 	url = https://git.yoctoproject.org/git/meta-arm
